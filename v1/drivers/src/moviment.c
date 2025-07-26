@@ -10,12 +10,13 @@
 
 #include "moviment.h"
 #include "timer0_delay.h"
+#include "hardware_config.h"
 
 Moviment movs[] = {
-	{90.0, 0},
-	{180.0, 0},
-	{45.0, 0},
-	{720.0, 0}
+	{720.0, 0, 0},
+	{720.0, 0, 1},
+	{720, 0, 0},
+	{720.0, 0, 1}
 };
 
 const uint8_t max_moves = sizeof(movs) / sizeof(movs[0]);
@@ -34,6 +35,8 @@ void calcula_passos_moviments(void) {
 	}
 }
 
+
+// ISR PWM. Genera steps (polsos) per al motor. Fq: 1Khz; Dty: 50%.
 ISR(TIMER1_COMPA_vect) {
 	step_count++;
 	if (step_count >= movs[mov_index].passos) {
@@ -41,10 +44,12 @@ ISR(TIMER1_COMPA_vect) {
 	}
 }
 
-ISR(INT0_vect) {
-	if (MOV != 4) {
+ISR(PCINT0_vect) {
+ 	if(MOV != 4)
+	{
 		MOV = 3;
 	}
+	
 }
 
 void moviment_loop(void) {
@@ -65,6 +70,14 @@ void moviment_loop(void) {
 			step_count = 0;
 			TCNT1 = 0;
 			TCCR1A |= (1 << COM1A1); // Reactiva PWM
+			if(movs[mov_index].dir == 1)
+			{
+				PORTB &= ~(1 << DIR);		// Direcció CW				
+			}
+			else 
+			{
+				PORTB |= (1 << DIR);		// Direcció CCW	
+			}
 			MOV = 0;
 			} else {
 			MOV = 4;
@@ -72,15 +85,17 @@ void moviment_loop(void) {
 		break;
 
 		case 3:
-		if (PIND & ~(1 << PD0)) {
-			TCCR1A &= ~(1 << COM1A1);
+		// Llegim quin pin polsat
+		if (PINB & (1 << PINB3)) {
+			MOV = 2; // botó no polsat (pull-up actiu, pin alt)
+			TCCR1A |= (1 << COM1A1); // Reactiva PWM
 			} else {
-			DDRB &= ~(1 << PB0); // Configura direcció com entrada
-			MOV = 2;
+			TCCR1A &= ~(1 << COM1A1);
 		}
 		break;
 
 		case 4:
+		PORTB |= (1 << EN);
 		// Fi de moviment
 		break;
 	}

@@ -14,6 +14,7 @@
 typedef struct {
 	float graus;
 	int passos;
+	int dir;
 } Moviment;
 
 extern Moviment movs[];

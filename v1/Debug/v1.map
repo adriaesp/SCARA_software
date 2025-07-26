@@ -268,7 +268,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x646
+.text           0x00000000      0x6a0
  *(.vectors)
  .vectors       0x00000000       0xb4 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
                 0x00000000                __vector_default
@@ -330,6 +330,7 @@ END GROUP
                 0x000000ee                __vector_38
                 0x000000ee                __vector_22
                 0x000000ee                __vector_28
+                0x000000ee                __vector_1
                 0x000000ee                __vector_32
                 0x000000ee                __vector_34
                 0x000000ee                __vector_24
@@ -339,7 +340,6 @@ END GROUP
                 0x000000ee                __vector_31
                 0x000000ee                __vector_35
                 0x000000ee                __vector_39
-                0x000000ee                __vector_3
                 0x000000ee                __vector_23
                 0x000000ee                __vector_30
                 0x000000ee                __vector_25
@@ -375,82 +375,82 @@ END GROUP
                 0x000000f2       0x24 drivers/src/hardware_config.o
                 0x000000f2                int0_init
  .text.setup_driver
-                0x00000116       0x50 drivers/src/hardware_config.o
+                0x00000116       0x6a drivers/src/hardware_config.o
                 0x00000116                setup_driver
  .text.calcula_pasos
-                0x00000166       0x20 drivers/src/moviment.o
-                0x00000166                calcula_pasos
+                0x00000180       0x20 drivers/src/moviment.o
+                0x00000180                calcula_pasos
  .text.calcula_passos_moviments
-                0x00000186       0x44 drivers/src/moviment.o
-                0x00000186                calcula_passos_moviments
+                0x000001a0       0x44 drivers/src/moviment.o
+                0x000001a0                calcula_passos_moviments
  .text.__vector_11
-                0x000001ca       0x70 drivers/src/moviment.o
-                0x000001ca                __vector_11
- .text.__vector_1
-                0x0000023a       0x26 drivers/src/moviment.o
-                0x0000023a                __vector_1
+                0x000001e4       0x6e drivers/src/moviment.o
+                0x000001e4                __vector_11
+ .text.__vector_3
+                0x00000252       0x26 drivers/src/moviment.o
+                0x00000252                __vector_3
  .text.moviment_loop
-                0x00000260       0x9a drivers/src/moviment.o
-                0x00000260                moviment_loop
+                0x00000278       0xdc drivers/src/moviment.o
+                0x00000278                moviment_loop
  .text.timer0_init
-                0x000002fa       0x1a drivers/src/timer0_delay.o
-                0x000002fa                timer0_init
+                0x00000354       0x1a drivers/src/timer0_delay.o
+                0x00000354                timer0_init
  .text.__vector_14
-                0x00000314       0x2e drivers/src/timer0_delay.o
-                0x00000314                __vector_14
+                0x0000036e       0x2e drivers/src/timer0_delay.o
+                0x0000036e                __vector_14
  .text.delay_ms
-                0x00000342       0x1e drivers/src/timer0_delay.o
-                0x00000342                delay_ms
- .text.main     0x00000360       0x16 main.o
-                0x00000360                main
+                0x0000039c       0x1e drivers/src/timer0_delay.o
+                0x0000039c                delay_ms
+ .text.main     0x000003ba       0x16 main.o
+                0x000003ba                main
  .text.avr-libc.fplib
-                0x00000376        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                0x00000376                __divsf3
+                0x000003d0        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x000003d0                __divsf3
  .text.avr-libc.fplib
-                0x0000037e       0xdc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
-                0x0000039e                __divsf3x
-                0x000003a4                __divsf3_pse
+                0x000003d8       0xdc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x000003f8                __divsf3x
+                0x000003fe                __divsf3_pse
  .text.avr-libc.fplib
-                0x0000045a        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
-                0x0000045a                __fixsfsi
+                0x000004b4        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                0x000004b4                __fixsfsi
  .text.avr-libc.fplib
-                0x00000468       0x5e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                0x00000468                __fixunssfsi
+                0x000004c2       0x5e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x000004c2                __fixunssfsi
  .text.avr-libc.fplib
-                0x000004c6        0xc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x000004c6                __fp_inf
+                0x00000520        0xc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00000520                __fp_inf
  .text.avr-libc.fplib
-                0x000004d2        0x6 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x000004d2                __fp_nan
+                0x0000052c        0x6 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x0000052c                __fp_nan
  .text.avr-libc.fplib
-                0x000004d8        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x000004d8                __fp_pscA
+                0x00000532        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00000532                __fp_pscA
  .text.avr-libc.fplib
-                0x000004e6        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x000004e6                __fp_pscB
+                0x00000540        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00000540                __fp_pscB
  .text.avr-libc.fplib
-                0x000004f4       0x22 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x000004f4                __fp_round
+                0x0000054e       0x22 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x0000054e                __fp_round
  .text.avr-libc.fplib
-                0x00000516       0x44 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x00000516                __fp_split3
-                0x00000526                __fp_splitA
+                0x00000570       0x44 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00000570                __fp_split3
+                0x00000580                __fp_splitA
  .text.avr-libc.fplib
-                0x0000055a        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x0000055a                __fp_zero
-                0x0000055c                __fp_szero
+                0x000005b4        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x000005b4                __fp_zero
+                0x000005b6                __fp_szero
  .text.avr-libc.fplib
-                0x00000568        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                0x00000568                __mulsf3
+                0x000005c2        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x000005c2                __mulsf3
  .text.avr-libc.fplib
-                0x00000570       0xd2 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                0x0000058e                __mulsf3x
-                0x00000594                __mulsf3_pse
-                0x00000642                . = ALIGN (0x2)
+                0x000005ca       0xd2 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x000005e8                __mulsf3x
+                0x000005ee                __mulsf3_pse
+                0x0000069c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000642        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000642                _exit
-                0x00000642                exit
+ .fini9         0x0000069c        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000069c                _exit
+                0x0000069c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -469,49 +469,49 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000642        0x4 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000069c        0x4 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000646                _etext = .
+                0x000006a0                _etext = .
 
-.data           0x00800100       0x18 load address 0x00000646
+.data           0x00800100       0x20 load address 0x000006a0
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.movs     0x00800100       0x18 drivers/src/moviment.o
+ .data.movs     0x00800100       0x20 drivers/src/moviment.o
                 0x00800100                movs
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x00800118                . = ALIGN (0x2)
-                0x00800118                _edata = .
-                0x00800118                PROVIDE (__data_end, .)
+                0x00800120                . = ALIGN (0x2)
+                0x00800120                _edata = .
+                0x00800120                PROVIDE (__data_end, .)
 
-.bss            0x00800118        0x7
-                0x00800118                PROVIDE (__bss_start, .)
+.bss            0x00800120        0x7
+                0x00800120                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.MOV       0x00800118        0x1 drivers/src/moviment.o
-                0x00800118                MOV
+ .bss.MOV       0x00800120        0x1 drivers/src/moviment.o
+                0x00800120                MOV
  .bss.mov_index
-                0x00800119        0x2 drivers/src/moviment.o
-                0x00800119                mov_index
+                0x00800121        0x2 drivers/src/moviment.o
+                0x00800121                mov_index
  .bss.step_count
-                0x0080011b        0x2 drivers/src/moviment.o
-                0x0080011b                step_count
+                0x00800123        0x2 drivers/src/moviment.o
+                0x00800123                step_count
  .bss.timer0_millis
-                0x0080011d        0x2 drivers/src/timer0_delay.o
-                0x0080011d                timer0_millis
+                0x00800125        0x2 drivers/src/timer0_delay.o
+                0x00800125                timer0_millis
  *(COMMON)
-                0x0080011f                PROVIDE (__bss_end, .)
-                0x00000646                __data_load_start = LOADADDR (.data)
-                0x0000065e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800127                PROVIDE (__bss_end, .)
+                0x000006a0                __data_load_start = LOADADDR (.data)
+                0x000006c0                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080011f        0x0
+.noinit         0x00800127        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x0080011f                _end = .
+                0x00800127                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -593,29 +593,29 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xd76
+.debug_info     0x00000000      0xd84
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x8ea C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
  .debug_info    0x000008ea       0xa4 drivers/src/hardware_config.o
- .debug_info    0x0000098e      0x202 drivers/src/moviment.o
- .debug_info    0x00000b90       0xef drivers/src/timer0_delay.o
- .debug_info    0x00000c7f       0xf7 main.o
+ .debug_info    0x0000098e      0x210 drivers/src/moviment.o
+ .debug_info    0x00000b9e       0xef drivers/src/timer0_delay.o
+ .debug_info    0x00000c8d       0xf7 main.o
 
-.debug_abbrev   0x00000000      0xb2d
+.debug_abbrev   0x00000000      0xb3c
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x86e C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
  .debug_abbrev  0x0000086e       0x51 drivers/src/hardware_config.o
- .debug_abbrev  0x000008bf      0x15a drivers/src/moviment.o
- .debug_abbrev  0x00000a19       0xac drivers/src/timer0_delay.o
- .debug_abbrev  0x00000ac5       0x68 main.o
+ .debug_abbrev  0x000008bf      0x169 drivers/src/moviment.o
+ .debug_abbrev  0x00000a28       0xac drivers/src/timer0_delay.o
+ .debug_abbrev  0x00000ad4       0x68 main.o
 
-.debug_line     0x00000000      0x635
+.debug_line     0x00000000      0x65f
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1a6 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
- .debug_line    0x000001a6      0x115 drivers/src/hardware_config.o
- .debug_line    0x000002bb      0x1ce drivers/src/moviment.o
- .debug_line    0x00000489      0x10a drivers/src/timer0_delay.o
- .debug_line    0x00000593       0xa2 main.o
+ .debug_line    0x000001a6      0x127 drivers/src/hardware_config.o
+ .debug_line    0x000002cd      0x1e6 drivers/src/moviment.o
+ .debug_line    0x000004b3      0x10a drivers/src/timer0_delay.o
+ .debug_line    0x000005bd       0xa2 main.o
 
 .debug_frame    0x00000000      0x160
  *(.debug_frame)
