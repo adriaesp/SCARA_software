@@ -1,4 +1,5 @@
-main.d main.o: .././main.c \
+drivers/src/hardware_config.d drivers/src/hardware_config.o: \
+ ../drivers/src/hardware_config.c \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -11,9 +12,7 @@ main.d main.o: .././main.c \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ..\/drivers/include/timer0_delay.h \
- c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
- ..\/drivers/include/moviment.h ..\/drivers/include/hardware_config.h
+ ..\/drivers/include/hardware_config.h
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -38,11 +37,5 @@ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\f
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
-
-..\/drivers/include/timer0_delay.h:
-
-c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
-
-..\/drivers/include/moviment.h:
 
 ..\/drivers/include/hardware_config.h:

@@ -1,5 +1,5 @@
-Timer0_delay.d Timer0_delay.o: .././Timer0_delay.c .././timer0_delay.h \
- c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
+drivers/src/timer0_delay.d drivers/src/timer0_delay.o: \
+ ../drivers/src/timer0_delay.c \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -11,11 +11,9 @@ Timer0_delay.d Timer0_delay.o: .././Timer0_delay.c .././timer0_delay.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h
-
-.././timer0_delay.h:
-
-c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
+ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
+ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
+ ..\/drivers/include/timer0_delay.h
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -39,4 +37,8 @@ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\f
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
+c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
+
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
+
+..\/drivers/include/timer0_delay.h:

@@ -32,13 +32,18 @@ LIB_DEP:=
 LINKER_SCRIPT_DEP:=
 
 # Every subdirectory with source files must be described here
-SUBDIRS := 
+SUBDIRS :=  \
+../drivers/include/ \
+../drivers \
+../drivers/src/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../main.c \
-../Timer0_delay.c
+../drivers/src/hardware_config.c \
+../drivers/src/moviment.c \
+../drivers/src/timer0_delay.c \
+../main.c
 
 
 PREPROCESSING_SRCS += 
@@ -48,20 +53,28 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-main.o \
-Timer0_delay.o
+drivers/src/hardware_config.o \
+drivers/src/moviment.o \
+drivers/src/timer0_delay.o \
+main.o
 
 OBJS_AS_ARGS +=  \
-main.o \
-Timer0_delay.o
+drivers/src/hardware_config.o \
+drivers/src/moviment.o \
+drivers/src/timer0_delay.o \
+main.o
 
 C_DEPS +=  \
-main.d \
-Timer0_delay.d
+drivers/src/hardware_config.d \
+drivers/src/moviment.d \
+drivers/src/timer0_delay.d \
+main.d
 
 C_DEPS_AS_ARGS +=  \
-main.d \
-Timer0_delay.d
+drivers/src/hardware_config.d \
+drivers/src/moviment.d \
+drivers/src/timer0_delay.d \
+main.d
 
 OUTPUT_FILE_PATH +=v1.elf
 
@@ -77,17 +90,31 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-./main.o: .././main.c
+drivers/src/hardware_config.o: ../drivers/src/hardware_config.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"..\/drivers/include" -I"..\/drivers/src"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
-./Timer0_delay.o: .././Timer0_delay.c
+drivers/src/moviment.o: ../drivers/src/moviment.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"..\/drivers/include" -I"..\/drivers/src"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+drivers/src/timer0_delay.o: ../drivers/src/timer0_delay.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"..\/drivers/include" -I"..\/drivers/src"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./main.o: .././main.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"..\/drivers/include" -I"..\/drivers/src"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 

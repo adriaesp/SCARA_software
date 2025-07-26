@@ -1,7 +1,12 @@
 
 // Configura delay amb timer 0
 
+#include <avr/io.h>
+#include <stdbool.h>
+#include <avr/interrupt.h>
+
 #include "timer0_delay.h"
+
 
 volatile uint16_t timer0_millis = 0;
 
@@ -19,9 +24,8 @@ ISR(TIMER0_COMPA_vect) {
 }
 
 bool delay_ms(uint16_t ms) {
-	uint16_t start = timer0_millis;
 	if ((uint16_t)(timer0_millis) >= ms) {
-		timer0_millis = 0;
+		timer0_millis = 0;					// Retorna True quan ms <= nº milisegons
 		return true;
 	}
 	return false;

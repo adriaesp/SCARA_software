@@ -2,7 +2,11 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-main.c
+drivers\src\hardware_config.c
 
-Timer0_delay.c
+drivers\src\moviment.c
+
+drivers\src\timer0_delay.c
+
+main.c
 
