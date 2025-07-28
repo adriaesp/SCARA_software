@@ -13,8 +13,8 @@
 
 
 void int0_init(void) {
-	DDRD &= ~(1 << FC_Z);
-	PORTD &= ~(1 << FC_Z);
+	DDRD &= ~(1 << FC_q2);
+	PORTD &= ~(1 << FC_q2);
 	EICRA |= (1 << ISC00);
 	EICRA &= ~(1 << ISC01);
 	EIMSK |= (1 << INT0);
@@ -22,10 +22,10 @@ void int0_init(void) {
 
 void setup_driver(void) {
 	DDRB |= (1 << DIR) | (1 << STEP) | (1 << EN);  // PB0, PB1 i PB2 com a sortides 
-	DDRB &= ~(1 << FC_Z);	// PB3 com a entrada
+	DDRB &= ~(1 << FC_q2);	// PB3 com a entrada
 
-	PORTB |= (1 << DIR) | (1<<FC_Z);		// Direcció CCW; Resist Pull Up PINB3
-	PORTB &= ~(1 << EN);					// Enable LOW
+	PORTB |= (1 << DIR);		// Direcció CCW
+	PORTB &= ~((1 << EN) |(1<<FC_q2));					// Enable LOW; Resist Pull down PINB3
 
 	DDRC |= (1 << MS2) | (1 << MS1);		// PC5 i PC4 com a sortides 
 	PORTC &= ~((1 << MS2) | (1 << MS1));	// 00: 1/8 -> microstepping

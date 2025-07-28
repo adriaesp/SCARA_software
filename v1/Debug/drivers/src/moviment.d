@@ -11,7 +11,11 @@ drivers/src/moviment.d drivers/src/moviment.o: ../drivers/src/moviment.c \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ..\/drivers/include/moviment.h ..\/drivers/include/timer0_delay.h \
+ ..\/drivers/include/moviment.h \
+ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
+ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
+ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ ..\/drivers/include/timer0_delay.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
  ..\/drivers/include/hardware_config.h
 
@@ -40,6 +44,12 @@ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\l
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
 ..\/drivers/include/moviment.h:
+
+c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
+
+c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
+
+c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
 ..\/drivers/include/timer0_delay.h:
 

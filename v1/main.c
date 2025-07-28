@@ -12,6 +12,7 @@ int main(void) {
 	int0_init();
 	timer0_init();
 	setup_driver();
+	homing();
 
 	while (1) {
 		moviment_loop();
