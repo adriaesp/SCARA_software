@@ -9,6 +9,9 @@
 #ifndef MOVIMENT_H
 #define MOVIMENT_H
 
+
+
+
 #include <stdint.h>
 #include <util/delay.h> 
 
@@ -25,6 +28,7 @@ extern uint8_t max_moves;
 extern volatile int step_count;
 extern volatile int mov_index;
 extern volatile uint8_t MOV;
+extern volatile uint8_t HM;
 
 void calcula_passos_moviments(void);
 void homing(void);
