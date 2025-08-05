@@ -9,23 +9,40 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-#include "moviment.h"
-#include "timer0_delay.h"
+#include "calc_moviment.h"
 #include "hardware_config.h"
+#include "punts.h"
 
 
-Moviment movs[] = {
-	{90, 0, 1},
-	{90, 0, 1},
- 	{90, 0, 1},
- 	{90, 0, 0},
- 	{90, 0, 0},
- 	{95, 0, 1},
-// 	{50, 0, 1},
-	{-1.0f, 0}
-};
+
+int calcula_pasos_q2(float graus) {
+	return (int)(5766.0 * (graus / 360.0));
+}
+
+int calcula_pasos_q3(float graus) {
+	return (int)(10152.0 * (graus / 360.0));
+}
+
+int calcula_passos_moviments_q2(Moviment movs[]) {
+	int i;
+	for (i = 0;movs[i].graus != -1.0f; i++) {
+		movs[i].passos = calcula_pasos_q2(movs[i].graus);
+		}
+		return i; //nombre màxim de movs
+}
+
+int calcula_passos_moviments_q3(Moviment movs[]) {
+	int i;
+	for (i = 0;movs[i].graus != -1.0f; i++) {
+		movs[i].passos = calcula_pasos_q3(movs[i].graus);
+		}
+		return i; //nombre màxim de movs
+}
 
 
+
+
+/*
 
 volatile int step_count = 0;
 volatile int mov_index = 0;
@@ -33,20 +50,18 @@ volatile uint8_t MOV = 0;
 volatile uint8_t HM = 1;
 volatile uint8_t ACABAT = 0;
 
-uint8_t max_moves = 0;
 
-int calcula_pasos(float graus) {
-	return (int)(5766.0 * (graus / 360.0));
-}
 
-void calcula_passos_moviments(void) {
-	for (int i = 0;movs[i].graus != -1.0f; i++) {
-		movs[i].passos = calcula_pasos(movs[i].graus);
-		max_moves = i;
-	}
-	
-	
-}
+Moviment movs[] = {
+	{90, 0, 1},
+	{90, 0, 1},
+	{90, 0, 1},
+	{90, 0, 0},
+	{90, 0, 0},
+	{95, 0, 1},
+	// 	{50, 0, 1},
+	{-1.0f, 0}
+};
 
 
 // ISR PWM. Genera steps (polsos) per al motor. Fq: 1Khz; Dty: 50%.
@@ -160,3 +175,6 @@ void moviment_loop(void) {
 		break;
 	}
 }
+
+
+*/

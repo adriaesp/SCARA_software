@@ -41,7 +41,10 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../drivers/src/hardware_config.c \
-../drivers/src/moviment.c \
+../drivers/src/calc_moviment.c \
+../drivers/src/punts.c \
+../drivers/src/q2.c \
+../drivers/src/q3.c \
 ../drivers/src/timer0_delay.c \
 ../main.c
 
@@ -54,25 +57,37 @@ ASM_SRCS +=
 
 OBJS +=  \
 drivers/src/hardware_config.o \
-drivers/src/moviment.o \
+drivers/src/calc_moviment.o \
+drivers/src/punts.o \
+drivers/src/q2.o \
+drivers/src/q3.o \
 drivers/src/timer0_delay.o \
 main.o
 
 OBJS_AS_ARGS +=  \
 drivers/src/hardware_config.o \
-drivers/src/moviment.o \
+drivers/src/calc_moviment.o \
+drivers/src/punts.o \
+drivers/src/q2.o \
+drivers/src/q3.o \
 drivers/src/timer0_delay.o \
 main.o
 
 C_DEPS +=  \
 drivers/src/hardware_config.d \
-drivers/src/moviment.d \
+drivers/src/calc_moviment.d \
+drivers/src/punts.d \
+drivers/src/q2.d \
+drivers/src/q3.d \
 drivers/src/timer0_delay.d \
 main.d
 
 C_DEPS_AS_ARGS +=  \
 drivers/src/hardware_config.d \
-drivers/src/moviment.d \
+drivers/src/calc_moviment.d \
+drivers/src/punts.d \
+drivers/src/q2.d \
+drivers/src/q3.d \
 drivers/src/timer0_delay.d \
 main.d
 
@@ -97,7 +112,28 @@ drivers/src/hardware_config.o: ../drivers/src/hardware_config.c
 	@echo Finished building: $<
 	
 
-drivers/src/moviment.o: ../drivers/src/moviment.c
+drivers/src/calc_moviment.o: ../drivers/src/calc_moviment.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"..\/drivers/include" -I"..\/drivers/src"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+drivers/src/punts.o: ../drivers/src/punts.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"..\/drivers/include" -I"..\/drivers/src"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+drivers/src/q2.o: ../drivers/src/q2.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"..\/drivers/include" -I"..\/drivers/src"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+drivers/src/q3.o: ../drivers/src/q3.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Users\adrie\Programes\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"..\/drivers/include" -I"..\/drivers/src"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "C:\Users\adrie\Programes\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
