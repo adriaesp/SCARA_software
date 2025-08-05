@@ -6,14 +6,12 @@
 #include "hardware_config.h"
 
 int main(void) {
-	// Precalcula els passos per cada moviment
-	calcula_passos_moviments();
+        int0_init();
+        timer0_init();
+        setup_driver();
+        init_motors();
 
-	int0_init();
-	timer0_init();
-	setup_driver();
-
-	while (1) {
-		moviment_loop();
-	}
+        while (1) {
+                moviment_loop();
+        }
 }
