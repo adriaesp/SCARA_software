@@ -1,31 +1,34 @@
 /*
  * moviment.h
  *
- * Created: 26/07/2025 12:28:27
- *  Author: adrie
- */ 
-
+ * Generic movement control for multiple stepper motors.
+ */
 
 #ifndef MOVIMENT_H
 #define MOVIMENT_H
 
 #include <stdint.h>
+#include "hardware_config.h"
 
 typedef struct {
-	float graus;
-	int passos;
-	int dir;
+        float graus;   // desired rotation in degrees
+        int passos;    // steps calculated from graus
+        int dir;       // direction flag
 } Moviment;
 
-extern Moviment movs[];
-extern const uint8_t max_moves;
+typedef struct {
+        Moviment *movs;
+        uint8_t max_moves;
+        volatile int step_count;
+        volatile int mov_index;
+        volatile uint8_t MOV; // state machine variable
+        const MotorHW *hw;    // hardware pins
+} Motor;
 
-extern volatile int step_count;
-extern volatile int mov_index;
-extern volatile uint8_t MOV;
+extern Motor motors[3];
 
-void calcula_passos_moviments(void);
+void init_motors(void);
 void moviment_loop(void);
 
-
 #endif
+
