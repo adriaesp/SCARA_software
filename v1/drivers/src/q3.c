@@ -1,5 +1,5 @@
 /*
- * q2.c
+ * q3.c
  *
  * Created: 31/07/2025 18:48:25
  *  Author: adrie
