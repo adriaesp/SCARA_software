@@ -55,33 +55,31 @@ void homing_q2(void){
 			break;
 
 			case 1:		// Config inici desplaçament
-			step_count_q2 = 0;
-			TCNT1 = 0;
+ 			step_count_q2 = 0;
 			mov_index_q2 = 0;
 			llista_q2[mov_index_q2].passos = 5766;
+			TCNT1 = 0;
 			TCCR1A |= (1<<COM1A1);
 			HM_Q2  = 0;
 			break;
 
-			case 2:		// Config desplaçament a home
-			PORTB &= ~(1<<DIR_q2);
+			case 2:									// Config desplaçament a home
+			PORTB &= ~(1<<DIR_q2);					// Canvi direcció
 			step_count_q2 = 0;
-			TCNT1 = 0;
 			llista_q2[mov_index_q2].passos = 1920;
+			TCNT1 = 0;
 			PCMSK0 &= ~(1 << PCINT2);
 			HM_Q2  = 0;
 			break;
 
-			case 3:		// Home q2 acabat
+			case 3:							// Home q2 acabat
 			TIMSK1 &= ~(1 << OCIE1A);		// Timer1 INT OFF
-			cli();
 			TCCR1A &= ~(1<<COM1A1);			// PWM OFF
 			PCMSK0 |= (1 << PCINT2);
-			ACABAT_Q2 = 1;
-			//PORTD &= ~(1 << EN_q2);
-			_delay_ms(1000);
-			MOV_Q2 = 0;
+			ACABAT_Q2 = 1; 
+			mov_index_q2 ++;
 			step_count_q2 = 0;
+			MOV_Q2 = 0;
 			break;
 		}
 	}
@@ -97,11 +95,6 @@ void moviment_loop_q2(void) {
 		case 1: // Atura PWM. Seq no acabada
 		TCCR1A &= ~(1 << COM1A1);
 		TIMSK1 &= ~(1 << OCIE1A);
-		MOV_Q2 = 2;
-		
-		break;
-
-		case 2:
 		if (mov_index_q2 <= max_moves_q2) {
 			mov_index_q2++;
 			step_count_q2 = 0;
@@ -118,11 +111,11 @@ void moviment_loop_q2(void) {
 			}
 			MOV_Q2 = 0;
 			} else {
-			MOV_Q2 = 4;
+			MOV_Q2 = 3;
 		}
 		break;
 
-		case 3:
+		case 2:
 		// Llegim quin pin polsat
 		if (PINB & (1 << PINB2)) {
 			MOV_Q2 = 2;						// botó no polsat (pull-up actiu, pin alt)
@@ -132,9 +125,11 @@ void moviment_loop_q2(void) {
 		}
 		break;
 
-		case 4:
+		case 3:
 		PORTD |= (1 << EN_q2);
 		// Fi de moviment
 		break;
 	}
 }
+
+

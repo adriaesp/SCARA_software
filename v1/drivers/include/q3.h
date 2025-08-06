@@ -8,8 +8,8 @@
 #ifndef Q3_H_
 #define Q3_H_
 
-extern volatile int step_count_q3;
-extern volatile int mov_index_q3;
+extern volatile uint16_t step_count_q3;
+extern volatile uint8_t mov_index_q3;
 
 extern volatile uint8_t MOV_Q3;
 extern volatile uint8_t HM_Q3;

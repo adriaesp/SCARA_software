@@ -24,7 +24,7 @@
 #define EN_q3 PD5
 #define MS2_q3 PC2
 #define MS1_q3 PC3
-#define FC_q3 PB3
+#define FC_q3  PB3
 
 void int0_init(void);
 void setup_driver_q2(void); 

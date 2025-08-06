@@ -14,8 +14,8 @@
 #include "punts.h"
 #include "calc_moviment.h"
 
-volatile int step_count_q3 = 0;
-volatile int mov_index_q3 = 0;
+volatile uint16_t step_count_q3 = 0;
+volatile uint8_t mov_index_q3 = 0;
 volatile uint8_t MOV_Q3 = 0;
 volatile uint8_t HM_Q3 = 1;
 volatile uint8_t ACABAT_Q3 = 0;
@@ -35,7 +35,7 @@ ISR(TIMER3_COMPA_vect) {
 
 ISR(PCINT0_vect) {
 	if (PINB & (1 << PINB3)) {
-		if (MOV_Q3 != 4) {
+  		if (MOV_Q3 != 4) {
 			MOV_Q3 = 3;
 			HM_Q3 = 2;
 		}
@@ -44,7 +44,7 @@ ISR(PCINT0_vect) {
 	if (PINB & (1 << PINB2)) {
 		if(MOV_Q2 != 4)
 		{
-			MOV_Q2 = 3;
+			MOV_Q2 = 2;
 			HM_Q2 = 2;
 		}
 	}
@@ -85,9 +85,9 @@ void homing_q3(void) {
 			PCMSK0 |= (1 << PCINT4);	// Habilita interrupció a PB4
 			ACABAT_Q3 = 1;
 //			PORTD |= (1 << EN_q3);
-			_delay_ms(1000);
 			MOV_Q3 = 0;
 			step_count_q3 = 0;
+			mov_index_q3++;
 			break;
 		}
 	}
