@@ -21,6 +21,9 @@ int calcula_pasos_q2(float graus);
 int calcula_passos_moviments_q3(Moviment movs[]);
 int calcula_pasos_q3(float graus);
 
+int calcula_passos_moviments_d1(Moviment movs[]);
+int calcula_pasos_d1(float altura);
+
 #endif
 
 /*

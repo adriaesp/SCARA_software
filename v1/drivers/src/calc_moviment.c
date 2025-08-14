@@ -23,12 +23,16 @@ int calcula_pasos_q3(float graus) {
 	return (int)(10152.0 * (graus / 360.0));
 }
 
+int calcula_pasos_d1(float altura) {
+	return (int)(60000 * (altura / 15.5));
+}
+
 int calcula_passos_moviments_q2(Moviment movs[]) {
 	int i;
 	for (i = 0;movs[i].graus != -1.0f; i++) {
 		movs[i].passos = calcula_pasos_q2(movs[i].graus);
 		}
-		return i; //nombre màxim de movs
+		return i-1; //nombre màxim de movs
 }
 
 int calcula_passos_moviments_q3(Moviment movs[]) {
@@ -36,7 +40,15 @@ int calcula_passos_moviments_q3(Moviment movs[]) {
 	for (i = 0;movs[i].graus != -1.0f; i++) {
 		movs[i].passos = calcula_pasos_q3(movs[i].graus);
 		}
-		return i; //nombre màxim de movs
+		return i-1; //nombre màxim de movs
+}
+
+int calcula_passos_moviments_d1(Moviment movs[]) {
+	int i;
+	for (i = 0;movs[i].altura != -1.0f; i++) {
+		movs[i].passos = calcula_pasos_d1(movs[i].altura);
+		}
+		return i-1; //nombre màxim de movs
 }
 
 

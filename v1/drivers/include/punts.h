@@ -10,11 +10,13 @@
 
 typedef struct {
 	float graus;
+	float altura;
 	int passos;
 	int dir;
 } Moviment;
 
 extern Moviment llista_q2[];
 extern Moviment llista_q3[];
+extern Moviment llista_d1[];
 
 #endif /* PUNTS_H_ */

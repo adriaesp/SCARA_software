@@ -11,16 +11,9 @@
 #include "hardware_config.h"
 
 
-
-void int0_init(void) {
-	DDRD &= ~(1 << FC_q2);
-	PORTD &= ~(1 << FC_q2);
-	EICRA |= (1 << ISC00);
-	EICRA &= ~(1 << ISC01);
-	EIMSK |= (1 << INT0);
-}
-
 void setup_driver_q2(void) {
+	UCSR1B = 0;     // UART1 OFF
+	
 	DDRB |= (1 << DIR_q2) | (1 << STEP_q2);  // PB0, PB1 com a sortides
 	DDRB &= ~(1 << FC_q2);	// PB2 com a entrada 
 
@@ -70,10 +63,45 @@ void setup_driver_q3(void) {
 
 	// Interrupció per canvi a FC_q3 (PB3 == PCINT3)
 	PCMSK0 |= (1 << PCINT3);                      // Habilita interrupció per PB3
-	PCICR |= (1 << PCIE0);                        // Habilita interrupció per port B (PCINT[7:0])
+	//PCICR |= (1 << PCIE0);                        // Habilita interrupció per port B (PCINT[7:0])
 
 	ICR3 = 1119;  // Freqüència: 1 kHz (TOP)
 	OCR3A = 999;  // Duty cycle: 50%
 
 	sei(); // Habilita interrupcions globals
+}
+
+
+void setup_driver_d1(void) {
+	// Direcció i step com a sortides
+	DDRD |= (1 << DIR_d1) | (1 << STEP_d1);
+
+	// Enable com a sortida
+	DDRD |= (1 << EN_d1);
+
+	// Final de carrera com entrada amb pull-up (PD7)
+	DDRD &= ~(1 << FC_d1);     // FC_d1 = PD7
+	PORTD |= (1 << FC_d1);     // Pull-up activada (interruptor NC a GND)
+
+	// Direcció per defecte
+	PORTD |= (1 << DIR_d1);
+	PORTD &= ~(1 << EN_d1);    // Enable actiu (LOW)
+
+	// Microstepping
+	DDRC |= (1 << MS2_d1) | (1 << MS1_d1);
+	PORTC &= ~(1 << MS2_d1);
+	PORTC |=  (1 << MS1_d1);   // 01: 1/2 microstepping
+
+	// Timer 4 config
+	TCCR4A = (1 << COM4A1) | (1 << WGM41);
+	TCCR4B = (1 << WGM43) | (1 << WGM42) | (1 << CS41);
+	TIMSK4 |= (1 << OCIE4A);
+	ICR4 = 1000;
+	OCR4A = 500;
+
+	// Interrupció per canvi a PD7 (PCINT23)
+	PCMSK2 |= (1 << PCINT23);  // Activa interrupció per PD7
+	PCICR |= (1 << PCIE2);     // Activa grup de PCINT[23:16]
+
+	sei();                     // Habilita interrupcions globals
 }
