@@ -1,5 +1,4 @@
-drivers/src/timer0_delay.d drivers/src/timer0_delay.o: \
- ../drivers/src/timer0_delay.c \
+drivers/src/q3.d drivers/src/q3.o: ../drivers/src/q3.c \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -11,21 +10,19 @@ drivers/src/timer0_delay.d drivers/src/timer0_delay.o: \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
-<<<<<<< Updated upstream:v1/Debug/drivers/src/Timer0_delay.d
- ..\/drivers/include/timer0_delay.h
-=======
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ..\/drivers/include/calc_moviment.h ..\/drivers/include/punts.h \
+ ..\/drivers/include/q3.h ..\/drivers/include/q2.h \
+ ..\/drivers/include/d1.h ..\/drivers/include/hardware_config.h \
+ ..\/drivers/include/punts.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
- ..\/drivers/include/hardware_config.h ..\/drivers/include/punts.h
->>>>>>> Stashed changes:v1/Debug/drivers/src/calc_moviment.d
+ ..\/drivers/include/calc_moviment.h ..\/drivers/include/punts.h \
+ ..\/drivers/include/moviment.h
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -49,20 +46,21 @@ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\f
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
-c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
-
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
-<<<<<<< Updated upstream:v1/Debug/drivers/src/Timer0_delay.d
-..\/drivers/include/timer0_delay.h:
-=======
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
-..\/drivers/include/calc_moviment.h:
+..\/drivers/include/q3.h:
+
+..\/drivers/include/q2.h:
+
+..\/drivers/include/d1.h:
+
+..\/drivers/include/hardware_config.h:
 
 ..\/drivers/include/punts.h:
 
@@ -74,7 +72,8 @@ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
 
-..\/drivers/include/hardware_config.h:
+..\/drivers/include/calc_moviment.h:
 
 ..\/drivers/include/punts.h:
->>>>>>> Stashed changes:v1/Debug/drivers/src/calc_moviment.d
+
+..\/drivers/include/moviment.h:
