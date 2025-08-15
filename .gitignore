@@ -1,0 +1,9 @@
+.vs/
+v1/Debug/
+*.elf
+*.hex
+*.map
+*.lss
+*.o
+*.d
+*.srec
