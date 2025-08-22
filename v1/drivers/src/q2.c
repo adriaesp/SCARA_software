@@ -36,16 +36,7 @@ ISR(TIMER1_COMPA_vect) {
 	}
 }
 
-/*
-ISR(PCINT0_vect) {
-	if(MOV_Q2 != 4)
-	{
-		MOV_Q2 = 3;
-		HM_Q2 = 2;
-	}
 
-}
-*/
 
 
 void homing_q2(void){
@@ -109,7 +100,7 @@ void mou_q2(void){
 		
 		case 2:
 		// Llegim quin pin polsat
-		if (PINB & (1 << PINB2)) {
+		if (PINE & (1 << FC_q2)) {
 			MOV_Q2 = 1;						// botó no polsat (pull-up actiu, pin alt)
 			TCCR1A |= (1 << COM1A1);		// Reactiva PWM
 			} else {

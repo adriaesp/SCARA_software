@@ -16,5 +16,7 @@ drivers\src\q2.c
 
 drivers\src\q3.c
 
+drivers\src\USART.c
+
 main.c
 

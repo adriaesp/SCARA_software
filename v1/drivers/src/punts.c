@@ -8,6 +8,7 @@
 
 #include "punts.h"
 
+
 Moviment llista_q2[] = {
 	{10, 0, 0, 1},
 	{90, 0, 0, 0},

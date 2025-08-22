@@ -93,7 +93,7 @@ void mou_d1(void) {
 		break;
 
 		case 2: // Botó deixat anar
-		if (PIND & (1 << PD7)) {
+		if (PINE & (1 << FC_d1)) {
 			MOV_D1 = 1;
 			TCCR4A |= (1 << COM4A1);
 			} else {

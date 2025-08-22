@@ -8,6 +8,9 @@
 #ifndef PUNTS_H_
 #define PUNTS_H_
 
+#include <stdio.h>
+#define MAX_PUNTS 100
+
 typedef struct {
 	float graus;
 	float altura;

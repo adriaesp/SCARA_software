@@ -37,7 +37,7 @@ ISR(TIMER3_COMPA_vect) {
 	}
 }
 
-
+/*
 ISR(PCINT0_vect) {
 	if (PINB & (1 << PINB2)) {
 		if (MOV_Q2 != 4) {
@@ -52,7 +52,6 @@ ISR(PCINT0_vect) {
 		}
 	}
 }
-
 ISR(PCINT2_vect) {
 	if ((PIND & (1 << PD7))) {  // Detecta nivell LOW (interruptor premut)
 		if (MOV_D1 != 4) {
@@ -61,6 +60,30 @@ ISR(PCINT2_vect) {
 		}
 	}
 }
+*/
+
+ISR(PCINT3_vect){
+	if (PINE & (1 << FC_q2)) {
+		if (MOV_Q2 != 4) {
+			MOV_Q2 = 2;
+			HM_Q2 = 2;
+		}
+	}
+	if (PINE & (1 << FC_q3)) {
+		if (MOV_Q3 != 4) {
+			MOV_Q3 = 3;
+			HM_Q3 = 2;
+		}
+	}
+	if ((PINE & (1 << FC_d1))) {  
+		if (MOV_D1 != 4) {
+			MOV_D1 = 3;
+			HM_D1 = 2;
+		}
+	}
+}
+
+
 
 
 
@@ -124,7 +147,7 @@ void mou_q3(void) {
 		break;
 
 		case 2: // Polsador
-		if (PINB & (1 << PINB3)) {
+		if (PINE & (1 << FC_q3)) {
 			MOV_Q3 = 1;
 			TCCR3A |= (1 << COM3A1);
 			} else {
