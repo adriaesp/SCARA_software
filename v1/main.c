@@ -18,6 +18,7 @@ char c;
 uint8_t val = 5;
 
 
+
 int main(void) {
 	// Precalcula els passos per cada moviment
 	usart1_init();

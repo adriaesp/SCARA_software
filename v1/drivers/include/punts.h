@@ -18,8 +18,16 @@ typedef struct {
 	int dir;
 } Moviment;
 
+typedef struct {
+	float X;
+	float Y;
+	float Z;
+} Taula;
+
+
 extern Moviment llista_q2[];
 extern Moviment llista_q3[];
 extern Moviment llista_d1[];
+extern Taula coordenades[];
 
 #endif /* PUNTS_H_ */

@@ -9,9 +9,11 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
+#include <stdbool.h>
 #include "calc_moviment.h"
 #include "hardware_config.h"
 #include "punts.h"
+#include "USART.h"
 
 
 
@@ -52,141 +54,168 @@ int calcula_passos_moviments_d1(Moviment movs[]) {
 }
 
 
-
-
-/*
-
-volatile int step_count = 0;
-volatile int mov_index = 0;
-volatile uint8_t MOV = 0;
-volatile uint8_t HM = 1;
-volatile uint8_t ACABAT = 0;
-
-
-
-Moviment movs[] = {
-	{90, 0, 1},
-	{90, 0, 1},
-	{90, 0, 1},
-	{90, 0, 0},
-	{90, 0, 0},
-	{95, 0, 1},
-	// 	{50, 0, 1},
-	{-1.0f, 0}
-};
-
-
-// ISR PWM. Genera steps (polsos) per al motor. Fq: 1Khz; Dty: 50%.
-ISR(TIMER1_COMPA_vect) {
-	step_count++;
-	if (step_count >= movs[mov_index].passos) {
-		MOV = 1;
-		HM = 3;
-	}
-}
-
-ISR(PCINT0_vect) {
- 	if(MOV != 4)
+static bool c_inversa(float px, float py, float pz, int elbow_up, float *theta2_deg, float *theta3_deg, float *d1_out)
+{
+	/* D1 */
+	float d1 = (pz - L3) / L2;
+	if (d1_out != NULL)
 	{
-		MOV = 3;
-		HM = 2;
+		*d1_out = d1;
 	}
-	
-}
 
+	/* s3 i c3 */
+	float r2 = px * px + py * py;
+	float c3 = (r2 - L1 * L1 - L2 * L2) / (2.0f * L1 * L2);
 
-
-void homing(void){
-
-	while(!ACABAT)
+	if (c3 > 1.0f)
 	{
-		switch (HM){
-		case 0:		// Moviment
-		break;
+		c3 = 1.0f;
+	}
+	if (c3 < -1.0f)
+	{
+		c3 = -1.0f;
+	}
 
-		case 1:		// Config inici desplaçament
-		TCNT1 = 0;
-		mov_index = 0;
-		movs[mov_index].passos = 5766;
-		TCCR1A |= (1<<COM1A1);
-		HM  = 0;
-		break;
+	/* sqrt argument segur */
+	float one_minus_c3sq = 1.0f - c3 * c3;
+	if (one_minus_c3sq < 0.0f)
+	{
+		one_minus_c3sq = 0.0f;
+	}
 
-		case 2:		// Config desplaçament a home
-		PORTB &= ~(1<<DIR);
-		step_count = 0;
-		TCNT1 = 0;
-		movs[mov_index].passos = 1920;
-		PCMSK0 &= ~(1 << PCINT3);
-		HM  = 0;
-		break;
+	float s3_abs = sqrtf(one_minus_c3sq);
+	float s3;
+	if (elbow_up)
+	{
+		s3 = s3_abs;
+	}
+	else
+	{
+		s3 = -s3_abs;
+	}
 
-		case 3:		// Home q2 acabat
-		TIMSK1 &= ~(1 << OCIE1A);		// Timer1 INT OFF
-		cli();
-		TCCR1A &= ~(1<<COM1A1);			// PWM OFF
-		PCMSK0 |= (1 << PCINT3);
-		ACABAT = 1;
-		PORTB |= (1 << EN);
-		_delay_ms(1000);
-		MOV = 0;
-		step_count = 0;
-		break;
-		}
+	/* theta3 */
+	float theta3 = atan2f(s3, c3);
+	if (theta3_deg != NULL)
+	{
+		*theta3_deg = DEG(theta3);
+	}
+
+	/* theta2 */
+	float k1 = L1 + L2 * c3;
+	float k2 = L2 * s3;
+	float num = k1 * py - k2 * px;
+	float den = k1 * px + k2 * py;
+	float theta2 = atan2f(num, den);
+	if (theta2_deg != NULL)
+	{
+		*theta2_deg = DEG(theta2);
+	}
+
+	/* comprovació d’abast en XY: |L1-L2| <= r <= L1+L2 */
+	float r = sqrtf(r2);
+	float rmin = fabsf(L1 - L2);
+	float rmax = L1 + L2;
+
+	if (r >= (rmin - 1e-4f) && r <= (rmax + 1e-4f))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }
 
 
-
-void moviment_loop(void) {
-	switch (MOV) {
-		case 0: // En moviment
-		break;
-
-		case 1: // Atura PWM. Seq no acabada
-		TCCR1A &= ~(1 << COM1A1); 
-		TIMSK1 &= ~(1 << OCIE1A);
-		MOV = 2;
-		
-		break;
-
-		case 2:
-		if (mov_index <= max_moves) {
-			mov_index++;
-			step_count = 0;
-			TCNT1 = 0;
-			TIMSK1 |= (1 << OCIE1A);		// Timer1 INT ON
-			TCCR1A |= (1 << COM1A1);		// Reactiva PWM
-			if(movs[mov_index].dir == 1)
-			{
-				PORTB &= ~(1 << DIR);		// Direcció CW				
-			}
-			else 
-			{
-				PORTB |= (1 << DIR);		// Direcció CCW	
-			}
-			MOV = 0;
-			} else {
-			MOV = 4;
+void genera_graus(const Taula coords[], Moviment llista_q2[], Moviment llista_q3[], Moviment llista_d1[], int max_items)
+{
+	int i;
+	for (i = 0; i < max_items; i++)
+	{
+		/* comprovem si hem arribat al final amb el sentinella */
+		if (coords[i].X == -1.0f && coords[i].Y == -1.0f && coords[i].Z == -1.0f)
+		{
+			break;
 		}
-		break;
 
-		case 3:
-		// Llegim quin pin polsat
-		if (PINB & (1 << PINB3)) {
-			MOV = 2;						// botó no polsat (pull-up actiu, pin alt)
-			TCCR1A |= (1 << COM1A1);		// Reactiva PWM
-			} else {
-			TCCR1A &= ~(1 << COM1A1);		// Para timer1
+		float q2_deg = 0.0f;
+		float q3_deg = 0.0f;
+		float d1_mm = 0.0f;
+
+		int ok = c_inversa(coords[i].X, coords[i].Y, coords[i].Z, ELBOW_UP, &q2_deg, &q3_deg, &d1_mm);
+
+		/* Q2 */
+		llista_q2[i].graus = q2_deg;
+		llista_q2[i].altura = 0.0f;
+		llista_q2[i].passos = 0;
+		if (q2_deg >= 0.0f)
+		{
+			llista_q2[i].dir = 1;
 		}
-		break;
+		else
+		{
+			llista_q2[i].dir = 0;
+		}
 
-		case 4:
-		PORTB |= (1 << EN);
-		// Fi de moviment
-		break;
+		/* Q3 */
+		llista_q3[i].graus = q3_deg;
+		llista_q3[i].altura = 0.0f;
+		llista_q3[i].passos = 0;
+		if (q3_deg >= 0.0f)
+		{
+			llista_q3[i].dir = 1;
+		}
+		else
+		{
+			llista_q3[i].dir = 0;
+		}
+
+		/* D1 */
+		llista_d1[i].graus = 0.0f;
+		llista_d1[i].altura = d1_mm;
+		llista_d1[i].passos = 0;
+		if (d1_mm >= 0.0f)
+		{
+			llista_d1[i].dir = 1;
+		}
+		else
+		{
+			llista_d1[i].dir = 0;
+		}
+
+		/* si el punt no és assolible marquem error */
+		if (!ok)
+		{
+			usart1_enviac('0'+i);
+			usart1_envias("Pint NOT Achivable");
+			llista_q2[i].passos = -1;
+			llista_q3[i].passos = -1;
+			llista_d1[i].passos = -1;
+		}
 	}
+
+	/* afegim el sentinella de final */
+	if (i < max_items)
+	{
+		llista_q2[i].graus = -1.0f;
+		llista_q2[i].altura = 0.0f;
+		llista_q2[i].passos = 0;
+		llista_q2[i].dir = 0;
+
+		llista_q3[i].graus = -1.0f;
+		llista_q3[i].altura = 0.0f;
+		llista_q3[i].passos = 0;
+		llista_q3[i].dir = 0;
+
+		llista_d1[i].graus = 0.0f;
+		llista_d1[i].altura = -1.0f;
+		llista_d1[i].passos = 0;
+		llista_d1[i].dir = 0;
+	}
+
+	/* ara calculem els passos amb les funcions que ja tens */
+	calcula_passos_moviments_q2(llista_q2);
+	calcula_passos_moviments_q3(llista_q3);
+	calcula_passos_moviments_d1(llista_d1);
 }
-
-
-*/

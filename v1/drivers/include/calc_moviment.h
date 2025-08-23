@@ -14,6 +14,14 @@
 
 #include "punts.h"
 
+#define L1 10.0f   // mm, braç 1
+#define L2 10.0f   // mm, braç 2 
+#define L3  0.0f    // mm, offset vertical
+#define ELBOW_UP 1  // 1 = "up"
+
+// Conversions
+#define DEG(x) ((x) * 180.0f / (float)M_PI)
+
 
 int calcula_passos_moviments_q2(Moviment movs[]);
 int calcula_pasos_q2(float graus);
