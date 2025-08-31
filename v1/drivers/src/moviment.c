@@ -9,6 +9,7 @@
 #include "q3.h"
 #include "d1.h"
 #include "moviment.h"
+#include "USART.h"
 
 volatile uint8_t mov_index = 0;
 
@@ -19,6 +20,9 @@ void moviment(void) {
 			MOV_Q2 = 1;
 			MOV_Q3 = 1;
 			MOV_D1 = 1;
+			usart1_envias("Q2");
+			usart1_envias("Q3");
+			usart1_envias("Q4\r\n");
 			} else {
 			MOV_Q2 = 3;
 			MOV_Q3 = 3;
@@ -32,3 +36,6 @@ void moviment(void) {
 	mou_q3();
 	mou_d1();
 }
+
+
+

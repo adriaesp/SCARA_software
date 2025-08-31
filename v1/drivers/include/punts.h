@@ -9,12 +9,12 @@
 #define PUNTS_H_
 
 #include <stdio.h>
-#define MAX_PUNTS 100
+#define MAX_PUNTS 20
 
 typedef struct {
 	float graus;
 	float altura;
-	int passos;
+	long int passos;
 	int dir;
 } Moviment;
 

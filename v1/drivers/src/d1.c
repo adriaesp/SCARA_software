@@ -8,7 +8,6 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <util/delay.h>
 
 #include "d1.h"
 #include "hardware_config.h"

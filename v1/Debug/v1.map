@@ -17,7 +17,11 @@ c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/av
 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
                               drivers/src/calc_moviment.o (__fixsfsi)
 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                              main.o (__fixunssfsi)
+                              c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o) (__fixunssfsi)
+c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmax.o)
+                              drivers/src/calc_moviment.o (fmax)
+c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmin.o)
+                              drivers/src/calc_moviment.o (fmin)
 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
                               c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o) (__fp_cmp)
 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
@@ -63,77 +67,339 @@ Allocating common symbols
 Common symbol       size              file
 
 buffer              0x80              main.o
-c                   0x1               main.o
 max_moves           0x1               main.o
+elbow               0x2               drivers/src/d1.o
 
 Discarded input sections
 
  .data          0x00000000        0x0 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
  .bss           0x00000000        0x0 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/d1.o
  .text          0x00000000        0x0 drivers/src/d1.o
  .data          0x00000000        0x0 drivers/src/d1.o
  .bss           0x00000000        0x0 drivers/src/d1.o
  .bss.mov_index_d1
                 0x00000000        0x1 drivers/src/d1.o
- .text.mou_d1   0x00000000      0x118 drivers/src/d1.o
+ COMMON         0x00000000        0x2 drivers/src/d1.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/hardware_config.o
  .text          0x00000000        0x0 drivers/src/hardware_config.o
  .data          0x00000000        0x0 drivers/src/hardware_config.o
  .bss           0x00000000        0x0 drivers/src/hardware_config.o
+ .debug_macro   0x00000000      0xa4e drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0x10 drivers/src/hardware_config.o
+ .debug_macro   0x00000000      0x1c9 drivers/src/hardware_config.o
+ .debug_macro   0x00000000      0x2fc drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0x9e drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0x19 drivers/src/hardware_config.o
+ .debug_macro   0x00000000     0x1597 drivers/src/hardware_config.o
+ .debug_macro   0x00000000      0x156 drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0xbd drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0x34 drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0x18 drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0x6c drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0x69 drivers/src/hardware_config.o
+ .debug_macro   0x00000000       0x76 drivers/src/hardware_config.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/calc_moviment.o
  .text          0x00000000        0x0 drivers/src/calc_moviment.o
  .data          0x00000000        0x0 drivers/src/calc_moviment.o
  .bss           0x00000000        0x0 drivers/src/calc_moviment.o
- .text.c_inversa
-                0x00000000      0x512 drivers/src/calc_moviment.o
- .rodata        0x00000000       0x13 drivers/src/calc_moviment.o
- .text.genera_graus
-                0x00000000      0x794 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000      0xa4e drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x10 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000      0x1c9 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000      0x2fc drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x9e drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x19 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000     0x1597 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000      0x156 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0xbd drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x34 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x18 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x6c drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x69 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x22 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000      0x166 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x58 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x10 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x97 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0xf2 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x22 drivers/src/calc_moviment.o
+ .debug_macro   0x00000000       0x76 drivers/src/calc_moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/moviment.o
  .text          0x00000000        0x0 drivers/src/moviment.o
  .data          0x00000000        0x0 drivers/src/moviment.o
  .bss           0x00000000        0x0 drivers/src/moviment.o
- .text.moviment
-                0x00000000       0x7c drivers/src/moviment.o
+ .debug_macro   0x00000000      0xa4e drivers/src/moviment.o
+ .debug_macro   0x00000000      0x1c9 drivers/src/moviment.o
+ .debug_macro   0x00000000       0x10 drivers/src/moviment.o
+ .debug_macro   0x00000000       0x9e drivers/src/moviment.o
+ .debug_macro   0x00000000       0x19 drivers/src/moviment.o
+ .debug_macro   0x00000000     0x1597 drivers/src/moviment.o
+ .debug_macro   0x00000000      0x156 drivers/src/moviment.o
+ .debug_macro   0x00000000       0xbd drivers/src/moviment.o
+ .debug_macro   0x00000000       0x34 drivers/src/moviment.o
+ .debug_macro   0x00000000       0x18 drivers/src/moviment.o
+ .debug_macro   0x00000000       0x6c drivers/src/moviment.o
+ .group         0x00000000        0x8 drivers/src/punts.o
+ .group         0x00000000        0x8 drivers/src/punts.o
+ .group         0x00000000        0x8 drivers/src/punts.o
+ .group         0x00000000        0x8 drivers/src/punts.o
+ .group         0x00000000        0x8 drivers/src/punts.o
+ .group         0x00000000        0x8 drivers/src/punts.o
+ .group         0x00000000        0x8 drivers/src/punts.o
  .text          0x00000000        0x0 drivers/src/punts.o
  .data          0x00000000        0x0 drivers/src/punts.o
  .bss           0x00000000        0x0 drivers/src/punts.o
- .data.coordenades
-                0x00000000       0x6c drivers/src/punts.o
+ .debug_macro   0x00000000      0xa4e drivers/src/punts.o
+ .debug_macro   0x00000000      0x1c9 drivers/src/punts.o
+ .debug_macro   0x00000000      0x2fc drivers/src/punts.o
+ .debug_macro   0x00000000       0x58 drivers/src/punts.o
+ .debug_macro   0x00000000       0x10 drivers/src/punts.o
+ .debug_macro   0x00000000       0x97 drivers/src/punts.o
+ .debug_macro   0x00000000       0xf2 drivers/src/punts.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q2.o
  .text          0x00000000        0x0 drivers/src/q2.o
  .data          0x00000000        0x0 drivers/src/q2.o
  .bss           0x00000000        0x0 drivers/src/q2.o
- .text.mou_q2   0x00000000      0x118 drivers/src/q2.o
+ .debug_macro   0x00000000      0xa4e drivers/src/q2.o
+ .debug_macro   0x00000000       0x10 drivers/src/q2.o
+ .debug_macro   0x00000000      0x1c9 drivers/src/q2.o
+ .debug_macro   0x00000000      0x2fc drivers/src/q2.o
+ .debug_macro   0x00000000       0x9e drivers/src/q2.o
+ .debug_macro   0x00000000       0x19 drivers/src/q2.o
+ .debug_macro   0x00000000     0x1597 drivers/src/q2.o
+ .debug_macro   0x00000000      0x156 drivers/src/q2.o
+ .debug_macro   0x00000000       0xbd drivers/src/q2.o
+ .debug_macro   0x00000000       0x34 drivers/src/q2.o
+ .debug_macro   0x00000000       0x18 drivers/src/q2.o
+ .debug_macro   0x00000000       0x6c drivers/src/q2.o
+ .debug_macro   0x00000000       0x69 drivers/src/q2.o
+ .debug_macro   0x00000000       0x76 drivers/src/q2.o
+ .debug_macro   0x00000000       0x58 drivers/src/q2.o
+ .debug_macro   0x00000000       0x10 drivers/src/q2.o
+ .debug_macro   0x00000000       0x97 drivers/src/q2.o
+ .debug_macro   0x00000000       0xf2 drivers/src/q2.o
+ .debug_macro   0x00000000       0x22 drivers/src/q2.o
+ .debug_macro   0x00000000      0x166 drivers/src/q2.o
+ .debug_macro   0x00000000       0x22 drivers/src/q2.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/q3.o
  .text          0x00000000        0x0 drivers/src/q3.o
  .data          0x00000000        0x0 drivers/src/q3.o
  .bss           0x00000000        0x0 drivers/src/q3.o
- .text.mou_q3   0x00000000      0x11c drivers/src/q3.o
+ .debug_macro   0x00000000      0xa4e drivers/src/q3.o
+ .debug_macro   0x00000000       0x10 drivers/src/q3.o
+ .debug_macro   0x00000000      0x1c9 drivers/src/q3.o
+ .debug_macro   0x00000000      0x2fc drivers/src/q3.o
+ .debug_macro   0x00000000       0x9e drivers/src/q3.o
+ .debug_macro   0x00000000       0x19 drivers/src/q3.o
+ .debug_macro   0x00000000     0x1597 drivers/src/q3.o
+ .debug_macro   0x00000000      0x156 drivers/src/q3.o
+ .debug_macro   0x00000000       0xbd drivers/src/q3.o
+ .debug_macro   0x00000000       0x34 drivers/src/q3.o
+ .debug_macro   0x00000000       0x18 drivers/src/q3.o
+ .debug_macro   0x00000000       0x6c drivers/src/q3.o
+ .debug_macro   0x00000000       0x69 drivers/src/q3.o
+ .debug_macro   0x00000000       0x76 drivers/src/q3.o
+ .debug_macro   0x00000000       0x58 drivers/src/q3.o
+ .debug_macro   0x00000000       0x10 drivers/src/q3.o
+ .debug_macro   0x00000000       0x97 drivers/src/q3.o
+ .debug_macro   0x00000000       0xf2 drivers/src/q3.o
+ .debug_macro   0x00000000       0x22 drivers/src/q3.o
+ .debug_macro   0x00000000      0x166 drivers/src/q3.o
+ .debug_macro   0x00000000       0x22 drivers/src/q3.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
+ .group         0x00000000        0x8 drivers/src/USART.o
  .text          0x00000000        0x0 drivers/src/USART.o
  .data          0x00000000        0x0 drivers/src/USART.o
  .bss           0x00000000        0x0 drivers/src/USART.o
+ .debug_macro   0x00000000      0xa4e drivers/src/USART.o
+ .debug_macro   0x00000000       0x10 drivers/src/USART.o
+ .debug_macro   0x00000000      0x1c9 drivers/src/USART.o
+ .debug_macro   0x00000000      0x2fc drivers/src/USART.o
+ .debug_macro   0x00000000       0x9e drivers/src/USART.o
+ .debug_macro   0x00000000       0x19 drivers/src/USART.o
+ .debug_macro   0x00000000     0x1597 drivers/src/USART.o
+ .debug_macro   0x00000000      0x156 drivers/src/USART.o
+ .debug_macro   0x00000000       0xbd drivers/src/USART.o
+ .debug_macro   0x00000000       0x34 drivers/src/USART.o
+ .debug_macro   0x00000000       0x18 drivers/src/USART.o
+ .debug_macro   0x00000000       0x6c drivers/src/USART.o
+ .debug_macro   0x00000000       0x16 drivers/src/USART.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
- .data.test     0x00000000        0xc main.o
+ .debug_macro   0x00000000      0xa4e main.o
+ .debug_macro   0x00000000       0x10 main.o
+ .debug_macro   0x00000000      0x1c9 main.o
+ .debug_macro   0x00000000      0x2fc main.o
+ .debug_macro   0x00000000       0x9e main.o
+ .debug_macro   0x00000000       0x19 main.o
+ .debug_macro   0x00000000     0x1597 main.o
+ .debug_macro   0x00000000      0x156 main.o
+ .debug_macro   0x00000000       0xbd main.o
+ .debug_macro   0x00000000       0x34 main.o
+ .debug_macro   0x00000000       0x18 main.o
+ .debug_macro   0x00000000       0x6c main.o
+ .debug_macro   0x00000000       0x69 main.o
+ .debug_macro   0x00000000       0x22 main.o
+ .debug_macro   0x00000000      0x166 main.o
+ .debug_macro   0x00000000       0x58 main.o
+ .debug_macro   0x00000000       0x10 main.o
+ .debug_macro   0x00000000       0x97 main.o
+ .debug_macro   0x00000000       0xf2 main.o
+ .debug_macro   0x00000000       0x22 main.o
+ .debug_macro   0x00000000       0x76 main.o
+ .debug_macro   0x00000000       0x1c main.o
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
- .text.avr-libc.fplib
-                0x00000000        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
- .text.avr-libc.fplib
-                0x00000000       0xcc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan2.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan2.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan2.o)
- .text.avr-libc.fplib
-                0x00000000       0x86 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan2.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
- .text.avr-libc.fplib
-                0x00000000       0x5e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
- .progmem.gcc_fplib
-                0x00000000       0x2d c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
@@ -149,6 +415,12 @@ Discarded input sections
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmax.o)
+ .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmax.o)
+ .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmax.o)
+ .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmin.o)
+ .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmin.o)
+ .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmin.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
@@ -161,8 +433,6 @@ Discarded input sections
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
- .text.avr-libc.fplib
-                0x00000000       0x4e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
@@ -184,8 +454,6 @@ Discarded input sections
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(inverse.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(inverse.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(inverse.o)
- .text.avr-libc.fplib
-                0x00000000       0x10 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(inverse.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
@@ -195,23 +463,15 @@ Discarded input sections
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(sqrt.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(sqrt.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(sqrt.o)
- .text.avr-libc.fplib
-                0x00000000       0x8c c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(sqrt.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
- .text.avr-libc.fplib
-                0x00000000        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
- .text.avr-libc.fplib
-                0x00000000       0x1c c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
- .text.avr-libc.fplib
-                0x00000000        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
  .text          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -395,51 +655,54 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x14a2
+.text           0x00000000     0x2bca
  *(.vectors)
  .vectors       0x00000000       0xb4 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
-                0x000000b4                . = ALIGN (0x2)
-                0x000000b4                __trampolines_start = .
+ .progmem.gcc_fplib
+                0x000000b4       0x2d c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
+                0x000000e2                . = ALIGN (0x2)
+ *fill*         0x000000e1        0x1 
+                0x000000e2                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x000000b4        0x0 linker stubs
+ .trampolines   0x000000e2        0x0 linker stubs
  *(.trampolines*)
-                0x000000b4                __trampolines_end = .
+                0x000000e2                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
-                0x000000b4                . = ALIGN (0x2)
+                0x000000e2                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x000000b4                __ctors_start = .
+                0x000000e2                __ctors_start = .
  *(.ctors)
-                0x000000b4                __ctors_end = .
-                0x000000b4                __dtors_start = .
+                0x000000e2                __ctors_end = .
+                0x000000e2                __dtors_start = .
  *(.dtors)
-                0x000000b4                __dtors_end = .
+                0x000000e2                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000b4        0x0 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
-                0x000000b4                __init
+ .init0         0x000000e2        0x0 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+                0x000000e2                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000b4        0xc C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+ .init2         0x000000e2        0xc C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000000c0       0x16 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                0x000000c0                __do_copy_data
- .init4         0x000000d6       0x10 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
-                0x000000d6                __do_clear_bss
+ .init4         0x000000ee       0x16 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x000000ee                __do_copy_data
+ .init4         0x00000104       0x10 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000104                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -450,180 +713,234 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000000e6        0x8 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+ .init9         0x00000114        0x8 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
  *(.init9)
  *(.text)
- .text          0x000000ee        0x4 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
-                0x000000ee                __vector_38
-                0x000000ee                __vector_22
-                0x000000ee                __vector_28
-                0x000000ee                __vector_1
-                0x000000ee                __vector_32
-                0x000000ee                __vector_34
-                0x000000ee                __vector_24
-                0x000000ee                __vector_12
-                0x000000ee                __bad_interrupt
-                0x000000ee                __vector_6
-                0x000000ee                __vector_31
-                0x000000ee                __vector_35
-                0x000000ee                __vector_39
-                0x000000ee                __vector_3
-                0x000000ee                __vector_23
-                0x000000ee                __vector_30
-                0x000000ee                __vector_25
-                0x000000ee                __vector_13
-                0x000000ee                __vector_17
-                0x000000ee                __vector_19
-                0x000000ee                __vector_7
-                0x000000ee                __vector_41
-                0x000000ee                __vector_43
-                0x000000ee                __vector_5
-                0x000000ee                __vector_37
-                0x000000ee                __vector_4
-                0x000000ee                __vector_44
-                0x000000ee                __vector_9
-                0x000000ee                __vector_2
-                0x000000ee                __vector_21
-                0x000000ee                __vector_15
-                0x000000ee                __vector_36
-                0x000000ee                __vector_29
-                0x000000ee                __vector_40
-                0x000000ee                __vector_8
-                0x000000ee                __vector_26
-                0x000000ee                __vector_14
-                0x000000ee                __vector_10
-                0x000000ee                __vector_16
-                0x000000ee                __vector_18
-                0x000000ee                __vector_20
-                0x000000f2                . = ALIGN (0x2)
+ .text          0x0000011c        0x4 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
+                0x0000011c                __vector_38
+                0x0000011c                __vector_22
+                0x0000011c                __vector_28
+                0x0000011c                __vector_1
+                0x0000011c                __vector_32
+                0x0000011c                __vector_34
+                0x0000011c                __vector_24
+                0x0000011c                __vector_12
+                0x0000011c                __bad_interrupt
+                0x0000011c                __vector_6
+                0x0000011c                __vector_31
+                0x0000011c                __vector_35
+                0x0000011c                __vector_39
+                0x0000011c                __vector_3
+                0x0000011c                __vector_23
+                0x0000011c                __vector_30
+                0x0000011c                __vector_25
+                0x0000011c                __vector_13
+                0x0000011c                __vector_17
+                0x0000011c                __vector_19
+                0x0000011c                __vector_7
+                0x0000011c                __vector_41
+                0x0000011c                __vector_43
+                0x0000011c                __vector_5
+                0x0000011c                __vector_37
+                0x0000011c                __vector_4
+                0x0000011c                __vector_44
+                0x0000011c                __vector_9
+                0x0000011c                __vector_2
+                0x0000011c                __vector_21
+                0x0000011c                __vector_15
+                0x0000011c                __vector_36
+                0x0000011c                __vector_29
+                0x0000011c                __vector_40
+                0x0000011c                __vector_8
+                0x0000011c                __vector_26
+                0x0000011c                __vector_14
+                0x0000011c                __vector_10
+                0x0000011c                __vector_16
+                0x0000011c                __vector_18
+                0x0000011c                __vector_20
+                0x00000120                . = ALIGN (0x2)
  *(.text.*)
  .text.__vector_42
-                0x000000f2       0xb4 drivers/src/d1.o
-                0x000000f2                __vector_42
+                0x00000120       0xe2 drivers/src/d1.o
+                0x00000120                __vector_42
  .text.homing_d1
-                0x000001a6      0x140 drivers/src/d1.o
-                0x000001a6                homing_d1
+                0x00000202      0x168 drivers/src/d1.o
+                0x00000202                homing_d1
+ .text.mou_d1   0x0000036a      0x122 drivers/src/d1.o
+                0x0000036a                mou_d1
  .text.setup_driver_q2
-                0x000002e6      0x11a drivers/src/hardware_config.o
-                0x000002e6                setup_driver_q2
+                0x0000048c      0x11a drivers/src/hardware_config.o
+                0x0000048c                setup_driver_q2
  .text.setup_driver_q3
-                0x00000400      0x11a drivers/src/hardware_config.o
-                0x00000400                setup_driver_q3
+                0x000005a6      0x11a drivers/src/hardware_config.o
+                0x000005a6                setup_driver_q3
  .text.setup_driver_d1
-                0x0000051a      0x12c drivers/src/hardware_config.o
-                0x0000051a                setup_driver_d1
+                0x000006c0      0x12c drivers/src/hardware_config.o
+                0x000006c0                setup_driver_d1
  .text.calcula_pasos_q2
-                0x00000646       0x5a drivers/src/calc_moviment.o
-                0x00000646                calcula_pasos_q2
+                0x000007ec       0x5a drivers/src/calc_moviment.o
+                0x000007ec                calcula_pasos_q2
  .text.calcula_pasos_q3
-                0x000006a0       0x5a drivers/src/calc_moviment.o
-                0x000006a0                calcula_pasos_q3
+                0x00000846       0x5a drivers/src/calc_moviment.o
+                0x00000846                calcula_pasos_q3
  .text.calcula_pasos_d1
-                0x000006fa       0x5a drivers/src/calc_moviment.o
-                0x000006fa                calcula_pasos_d1
+                0x000008a0       0x5a drivers/src/calc_moviment.o
+                0x000008a0                calcula_pasos_d1
  .text.calcula_passos_moviments_q2
-                0x00000754       0xd6 drivers/src/calc_moviment.o
-                0x00000754                calcula_passos_moviments_q2
+                0x000008fa       0xf4 drivers/src/calc_moviment.o
+                0x000008fa                calcula_passos_moviments_q2
  .text.calcula_passos_moviments_q3
-                0x0000082a       0xd6 drivers/src/calc_moviment.o
-                0x0000082a                calcula_passos_moviments_q3
+                0x000009ee       0xf4 drivers/src/calc_moviment.o
+                0x000009ee                calcula_passos_moviments_q3
  .text.calcula_passos_moviments_d1
-                0x00000900       0xd6 drivers/src/calc_moviment.o
-                0x00000900                calcula_passos_moviments_d1
+                0x00000ae2       0xf4 drivers/src/calc_moviment.o
+                0x00000ae2                calcula_passos_moviments_d1
+ .text.c_inversa
+                0x00000bd6      0x570 drivers/src/calc_moviment.o
+                0x00000bd6                c_inversa
+ .text.genera_graus
+                0x00001146      0x9b8 drivers/src/calc_moviment.o
+                0x00001146                genera_graus
+ .text.moviment
+                0x00001afe       0x94 drivers/src/moviment.o
+                0x00001afe                moviment
  .text.__vector_11
-                0x000009d6       0xb2 drivers/src/q2.o
-                0x000009d6                __vector_11
+                0x00001b92       0xe4 drivers/src/q2.o
+                0x00001b92                __vector_11
  .text.homing_q2
-                0x00000a88      0x132 drivers/src/q2.o
-                0x00000a88                homing_q2
+                0x00001c76      0x15a drivers/src/q2.o
+                0x00001c76                homing_q2
+ .text.mou_q2   0x00001dd0      0x122 drivers/src/q2.o
+                0x00001dd0                mou_q2
  .text.__vector_33
-                0x00000bba       0xb4 drivers/src/q3.o
-                0x00000bba                __vector_33
+                0x00001ef2       0xe2 drivers/src/q3.o
+                0x00001ef2                __vector_33
  .text.__vector_27
-                0x00000c6e       0xae drivers/src/q3.o
-                0x00000c6e                __vector_27
+                0x00001fd4       0xae drivers/src/q3.o
+                0x00001fd4                __vector_27
  .text.homing_q3
-                0x00000d1c      0x144 drivers/src/q3.o
-                0x00000d1c                homing_q3
+                0x00002082      0x16c drivers/src/q3.o
+                0x00002082                homing_q3
+ .text.mou_q3   0x000021ee      0x126 drivers/src/q3.o
+                0x000021ee                mou_q3
  .text.usart1_init
-                0x00000e60       0x36 drivers/src/USART.o
-                0x00000e60                usart1_init
+                0x00002314       0x36 drivers/src/USART.o
+                0x00002314                usart1_init
  .text.usart1_lligc
-                0x00000e96       0x24 drivers/src/USART.o
-                0x00000e96                usart1_lligc
+                0x0000234a       0x24 drivers/src/USART.o
+                0x0000234a                usart1_lligc
  .text.usart1_enviac
-                0x00000eba       0x36 drivers/src/USART.o
-                0x00000eba                usart1_enviac
+                0x0000236e       0x36 drivers/src/USART.o
+                0x0000236e                usart1_enviac
  .text.usart1_envias
-                0x00000ef0       0x50 drivers/src/USART.o
-                0x00000ef0                usart1_envias
+                0x000023a4       0x50 drivers/src/USART.o
+                0x000023a4                usart1_envias
  .text.uart1_lligs
-                0x00000f40       0x8e drivers/src/USART.o
-                0x00000f40                uart1_lligs
- .text.main     0x00000fce      0x1a8 main.o
-                0x00000fce                main
+                0x000023f4       0x8e drivers/src/USART.o
+                0x000023f4                uart1_lligs
+ .text.main     0x00002482       0xc6 main.o
+                0x00002482                main
  .text.avr-libc.fplib
-                0x00001176        0xa c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
-                0x00001176                __nesf2
-                0x00001176                __eqsf2
-                0x00001176                __cmpsf2
-                0x00001176                __ltsf2
-                0x00001176                __lesf2
+                0x00002548        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00002548                __subsf3
+                0x0000254a                __addsf3
  .text.avr-libc.fplib
-                0x00001180        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                0x00001180                __divsf3
+                0x00002556       0xcc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x00002578                __addsf3x
  .text.avr-libc.fplib
-                0x00001188       0xdc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
-                0x000011a8                __divsf3x
-                0x000011ae                __divsf3_pse
+                0x00002622       0x86 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan2.o)
+                0x00002648                atan2
  .text.avr-libc.fplib
-                0x00001264        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
-                0x00001264                __fixsfsi
+                0x000026a8       0x5e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
+                0x000026a8                atan
  .text.avr-libc.fplib
-                0x00001272       0x5e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                0x00001272                __fixunssfsi
+                0x00002706        0xa c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
+                0x00002706                __nesf2
+                0x00002706                __eqsf2
+                0x00002706                __cmpsf2
+                0x00002706                __ltsf2
+                0x00002706                __lesf2
  .text.avr-libc.fplib
-                0x000012d0       0x48 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
-                0x000012d0                __fp_cmp
+                0x00002710        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00002710                __divsf3
  .text.avr-libc.fplib
-                0x00001318        0xc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x00001318                __fp_inf
+                0x00002718       0xdc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00002738                __divsf3x
+                0x0000273e                __divsf3_pse
  .text.avr-libc.fplib
-                0x00001324        0x6 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x00001324                __fp_nan
+                0x000027f4        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                0x000027f4                __fixsfsi
  .text.avr-libc.fplib
-                0x0000132a        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x0000132a                __fp_pscA
+                0x00002802       0x5e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x00002802                __fixunssfsi
  .text.avr-libc.fplib
-                0x00001338        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x00001338                __fp_pscB
+                0x00002860       0x3e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmax.o)
+                0x00002860                fmax
  .text.avr-libc.fplib
-                0x00001346       0x22 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x00001346                __fp_round
+                0x0000289e       0x3e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fmin.o)
+                0x0000289e                fmin
  .text.avr-libc.fplib
-                0x00001368       0x44 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x00001368                __fp_split3
-                0x00001378                __fp_splitA
+                0x000028dc       0x48 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
+                0x000028dc                __fp_cmp
  .text.avr-libc.fplib
-                0x000013ac        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x000013ac                __fp_zero
-                0x000013ae                __fp_szero
+                0x00002924        0xc c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00002924                __fp_inf
  .text.avr-libc.fplib
-                0x000013ba        0xa c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                0x000013ba                __gesf2
-                0x000013ba                __gtsf2
+                0x00002930        0x6 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00002930                __fp_nan
  .text.avr-libc.fplib
-                0x000013c4        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                0x000013c4                __mulsf3
+                0x00002936       0x4e c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
+                0x00002936                __fp_powser
  .text.avr-libc.fplib
-                0x000013cc       0xd2 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                0x000013ea                __mulsf3x
-                0x000013f0                __mulsf3_pse
-                0x0000149e                . = ALIGN (0x2)
+                0x00002984        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00002984                __fp_pscA
+ .text.avr-libc.fplib
+                0x00002992        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00002992                __fp_pscB
+ .text.avr-libc.fplib
+                0x000029a0       0x22 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x000029a0                __fp_round
+ .text.avr-libc.fplib
+                0x000029c2       0x44 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x000029c2                __fp_split3
+                0x000029d2                __fp_splitA
+ .text.avr-libc.fplib
+                0x00002a06        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00002a06                __fp_zero
+                0x00002a08                __fp_szero
+ .text.avr-libc.fplib
+                0x00002a14        0xa c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
+                0x00002a14                __gesf2
+                0x00002a14                __gtsf2
+ .text.avr-libc.fplib
+                0x00002a1e       0x10 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(inverse.o)
+                0x00002a1e                inverse
+ .text.avr-libc.fplib
+                0x00002a2e        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x00002a2e                __mulsf3
+ .text.avr-libc.fplib
+                0x00002a36       0xd2 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x00002a54                __mulsf3x
+                0x00002a5a                __mulsf3_pse
+ .text.avr-libc.fplib
+                0x00002b08       0x8c c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(sqrt.o)
+                0x00002b14                sqrtf
+                0x00002b14                sqrt
+ .text.avr-libc.fplib
+                0x00002b94        0x8 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
+                0x00002b94                square
+ .text.avr-libc.fplib
+                0x00002b9c       0x1c c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+                0x00002b9c                __fp_mpack
+                0x00002ba0                __fp_mpack_finite
+ .text.avr-libc.fplib
+                0x00002bb8        0xe c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
+                0x00002bb8                __fp_norm2
+                0x00002bc6                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000149e        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000149e                _exit
-                0x0000149e                exit
+ .fini9         0x00002bc6        0x0 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00002bc6                _exit
+                0x00002bc6                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -642,98 +959,100 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000149e        0x4 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002bc6        0x4 c:/users/adrie/programes/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000014a2                _etext = .
+                0x00002bca                _etext = .
 
-.data           0x00800100      0x17a load address 0x000014a2
+.data           0x00800100      0x1f8 load address 0x00002bca
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
  .data.HM_D1    0x00800100        0x1 drivers/src/d1.o
                 0x00800100                HM_D1
- .data.llista_q2
-                0x00800101       0x3c drivers/src/punts.o
-                0x00800101                llista_q2
- .data.llista_q3
-                0x0080013d       0x3c drivers/src/punts.o
-                0x0080013d                llista_q3
- .data.llista_d1
-                0x00800179       0x3c drivers/src/punts.o
-                0x00800179                llista_d1
- .data.HM_Q2    0x008001b5        0x1 drivers/src/q2.o
-                0x008001b5                HM_Q2
- .data.HM_Q3    0x008001b6        0x1 drivers/src/q3.o
-                0x008001b6                HM_Q3
- .data.val      0x008001b7        0x1 main.o
-                0x008001b7                val
+ .data.coordenades
+                0x00800101       0xf0 drivers/src/punts.o
+                0x00800101                coordenades
+ .data.HM_Q2    0x008001f1        0x1 drivers/src/q2.o
+                0x008001f1                HM_Q2
+ .data.HM_Q3    0x008001f2        0x1 drivers/src/q3.o
+                0x008001f2                HM_Q3
  *(.gnu.linkonce.d*)
  *(.rodata)
- .rodata        0x008001b8       0xc1 main.o
+ .rodata        0x008001f3       0x17 drivers/src/calc_moviment.o
+ .rodata        0x0080020a        0xb drivers/src/moviment.o
+ .rodata        0x00800215       0xe2 main.o
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x0080027a                . = ALIGN (0x2)
- *fill*         0x00800279        0x1 
-                0x0080027a                _edata = .
-                0x0080027a                PROVIDE (__data_end, .)
+                0x008002f8                . = ALIGN (0x2)
+ *fill*         0x008002f7        0x1 
+                0x008002f8                _edata = .
+                0x008002f8                PROVIDE (__data_end, .)
 
-.bss            0x0080027a       0x93
-                0x0080027a                PROVIDE (__bss_start, .)
+.bss            0x008002f8      0x3da
+                0x008002f8                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.step_count_d1
-                0x0080027a        0x2 drivers/src/d1.o
-                0x0080027a                step_count_d1
- .bss.MOV_D1    0x0080027c        0x1 drivers/src/d1.o
-                0x0080027c                MOV_D1
+                0x008002f8        0x2 drivers/src/d1.o
+                0x008002f8                step_count_d1
+ .bss.MOV_D1    0x008002fa        0x1 drivers/src/d1.o
+                0x008002fa                MOV_D1
  .bss.ACABAT_D1
-                0x0080027d        0x1 drivers/src/d1.o
-                0x0080027d                ACABAT_D1
+                0x008002fb        0x1 drivers/src/d1.o
+                0x008002fb                ACABAT_D1
  .bss.mov_acabat_d1
-                0x0080027e        0x1 drivers/src/d1.o
-                0x0080027e                mov_acabat_d1
+                0x008002fc        0x1 drivers/src/d1.o
+                0x008002fc                mov_acabat_d1
  .bss.mov_index
-                0x0080027f        0x1 drivers/src/moviment.o
-                0x0080027f                mov_index
+                0x008002fd        0x1 drivers/src/moviment.o
+                0x008002fd                mov_index
+ .bss.llista_q2
+                0x008002fe      0x118 drivers/src/punts.o
+                0x008002fe                llista_q2
+ .bss.llista_q3
+                0x00800416      0x118 drivers/src/punts.o
+                0x00800416                llista_q3
+ .bss.llista_d1
+                0x0080052e      0x118 drivers/src/punts.o
+                0x0080052e                llista_d1
  .bss.step_count_q2
-                0x00800280        0x2 drivers/src/q2.o
-                0x00800280                step_count_q2
- .bss.MOV_Q2    0x00800282        0x1 drivers/src/q2.o
-                0x00800282                MOV_Q2
+                0x00800646        0x2 drivers/src/q2.o
+                0x00800646                step_count_q2
+ .bss.MOV_Q2    0x00800648        0x1 drivers/src/q2.o
+                0x00800648                MOV_Q2
  .bss.ACABAT_Q2
-                0x00800283        0x1 drivers/src/q2.o
-                0x00800283                ACABAT_Q2
+                0x00800649        0x1 drivers/src/q2.o
+                0x00800649                ACABAT_Q2
  .bss.mov_acabat_q2
-                0x00800284        0x1 drivers/src/q2.o
-                0x00800284                mov_acabat_q2
+                0x0080064a        0x1 drivers/src/q2.o
+                0x0080064a                mov_acabat_q2
  .bss.step_count_q3
-                0x00800285        0x2 drivers/src/q3.o
-                0x00800285                step_count_q3
+                0x0080064b        0x2 drivers/src/q3.o
+                0x0080064b                step_count_q3
  .bss.mov_index_q3
-                0x00800287        0x1 drivers/src/q3.o
-                0x00800287                mov_index_q3
- .bss.MOV_Q3    0x00800288        0x1 drivers/src/q3.o
-                0x00800288                MOV_Q3
+                0x0080064d        0x1 drivers/src/q3.o
+                0x0080064d                mov_index_q3
+ .bss.MOV_Q3    0x0080064e        0x1 drivers/src/q3.o
+                0x0080064e                MOV_Q3
  .bss.ACABAT_Q3
-                0x00800289        0x1 drivers/src/q3.o
-                0x00800289                ACABAT_Q3
+                0x0080064f        0x1 drivers/src/q3.o
+                0x0080064f                ACABAT_Q3
  .bss.mov_acabat_q3
-                0x0080028a        0x1 drivers/src/q3.o
-                0x0080028a                mov_acabat_q3
+                0x00800650        0x1 drivers/src/q3.o
+                0x00800650                mov_acabat_q3
  *(COMMON)
- COMMON         0x0080028b       0x82 main.o
-                0x0080028b                buffer
-                0x0080030b                c
-                0x0080030c                max_moves
-                0x0080030d                PROVIDE (__bss_end, .)
-                0x000014a2                __data_load_start = LOADADDR (.data)
-                0x0000161c                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800651       0x81 main.o
+                0x00800651                buffer
+                0x008006d1                max_moves
+                0x008006d2                PROVIDE (__bss_end, .)
+                0x00002bca                __data_load_start = LOADADDR (.data)
+                0x00002dc2                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080030d        0x0
+.noinit         0x008006d2        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x0080030d                _end = .
+                0x008006d2                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -830,88 +1149,88 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1926
+.debug_info     0x00000000     0x197d
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x8ea C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
- .debug_info    0x000008ea      0x1af drivers/src/d1.o
- .debug_info    0x00000a99       0xba drivers/src/hardware_config.o
- .debug_info    0x00000b53      0x43a drivers/src/calc_moviment.o
- .debug_info    0x00000f8d       0xf5 drivers/src/moviment.o
- .debug_info    0x00001082      0x157 drivers/src/punts.o
- .debug_info    0x000011d9      0x19d drivers/src/q2.o
- .debug_info    0x00001376      0x1f9 drivers/src/q3.o
- .debug_info    0x0000156f      0x160 drivers/src/USART.o
- .debug_info    0x000016cf      0x257 main.o
+ .debug_info    0x000008ea      0x1cc drivers/src/d1.o
+ .debug_info    0x00000ab6       0xbe drivers/src/hardware_config.o
+ .debug_info    0x00000b74      0x4c6 drivers/src/calc_moviment.o
+ .debug_info    0x0000103a       0xf9 drivers/src/moviment.o
+ .debug_info    0x00001133      0x15b drivers/src/punts.o
+ .debug_info    0x0000128e      0x1ba drivers/src/q2.o
+ .debug_info    0x00001448      0x216 drivers/src/q3.o
+ .debug_info    0x0000165e      0x164 drivers/src/USART.o
+ .debug_info    0x000017c2      0x1bb main.o
 
-.debug_abbrev   0x00000000      0xf0b
+.debug_abbrev   0x00000000      0xea6
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x86e C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
- .debug_abbrev  0x0000086e       0xb3 drivers/src/d1.o
- .debug_abbrev  0x00000921       0x51 drivers/src/hardware_config.o
- .debug_abbrev  0x00000972      0x107 drivers/src/calc_moviment.o
- .debug_abbrev  0x00000a79       0x7a drivers/src/moviment.o
- .debug_abbrev  0x00000af3       0x81 drivers/src/punts.o
- .debug_abbrev  0x00000b74       0xb3 drivers/src/q2.o
- .debug_abbrev  0x00000c27       0xb3 drivers/src/q3.o
- .debug_abbrev  0x00000cda      0x101 drivers/src/USART.o
- .debug_abbrev  0x00000ddb      0x130 main.o
+ .debug_abbrev  0x0000086e       0xb6 drivers/src/d1.o
+ .debug_abbrev  0x00000924       0x54 drivers/src/hardware_config.o
+ .debug_abbrev  0x00000978      0x103 drivers/src/calc_moviment.o
+ .debug_abbrev  0x00000a7b       0x7d drivers/src/moviment.o
+ .debug_abbrev  0x00000af8       0x84 drivers/src/punts.o
+ .debug_abbrev  0x00000b7c       0xb6 drivers/src/q2.o
+ .debug_abbrev  0x00000c32       0xb6 drivers/src/q3.o
+ .debug_abbrev  0x00000ce8      0x104 drivers/src/USART.o
+ .debug_abbrev  0x00000dec       0xba main.o
 
-.debug_line     0x00000000     0x1383
+.debug_line     0x00000000     0x22de
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1a6 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
- .debug_line    0x000001a6      0x21e drivers/src/d1.o
- .debug_line    0x000003c4      0x210 drivers/src/hardware_config.o
- .debug_line    0x000005d4      0x3b0 drivers/src/calc_moviment.o
- .debug_line    0x00000984      0x13e drivers/src/moviment.o
- .debug_line    0x00000ac2       0x53 drivers/src/punts.o
- .debug_line    0x00000b15      0x21e drivers/src/q2.o
- .debug_line    0x00000d33      0x29a drivers/src/q3.o
- .debug_line    0x00000fcd      0x1a5 drivers/src/USART.o
- .debug_line    0x00001172      0x211 main.o
+ .debug_line    0x000001a6      0x400 drivers/src/d1.o
+ .debug_line    0x000005a6      0x3b1 drivers/src/hardware_config.o
+ .debug_line    0x00000957      0x664 drivers/src/calc_moviment.o
+ .debug_line    0x00000fbb      0x2d4 drivers/src/moviment.o
+ .debug_line    0x0000128f      0x140 drivers/src/punts.o
+ .debug_line    0x000013cf      0x408 drivers/src/q2.o
+ .debug_line    0x000017d7      0x47c drivers/src/q3.o
+ .debug_line    0x00001c53      0x32d drivers/src/USART.o
+ .debug_line    0x00001f80      0x35e main.o
 
-.debug_frame    0x00000000      0x540
+.debug_frame    0x00000000      0x584
  *(.debug_frame)
- .debug_frame   0x00000000       0x9c drivers/src/d1.o
- .debug_frame   0x0000009c       0x74 drivers/src/hardware_config.o
- .debug_frame   0x00000110      0x1a0 drivers/src/calc_moviment.o
- .debug_frame   0x000002b0       0x34 drivers/src/moviment.o
- .debug_frame   0x000002e4       0x9c drivers/src/q2.o
- .debug_frame   0x00000380       0xd8 drivers/src/q3.o
- .debug_frame   0x00000458       0xb4 drivers/src/USART.o
- .debug_frame   0x0000050c       0x34 main.o
+ .debug_frame   0x00000000       0xb8 drivers/src/d1.o
+ .debug_frame   0x000000b8       0x74 drivers/src/hardware_config.o
+ .debug_frame   0x0000012c      0x188 drivers/src/calc_moviment.o
+ .debug_frame   0x000002b4       0x34 drivers/src/moviment.o
+ .debug_frame   0x000002e8       0xb8 drivers/src/q2.o
+ .debug_frame   0x000003a0       0xf4 drivers/src/q3.o
+ .debug_frame   0x00000494       0xb4 drivers/src/USART.o
+ .debug_frame   0x00000548       0x3c main.o
 
-.debug_str      0x00000000      0x89c
+.debug_str      0x00000000     0x85a5
  *(.debug_str)
  .debug_str     0x00000000      0x318 C:/Users/adrie/Programes/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328pb/avr5/crtatmega328pb.o
- .debug_str     0x00000318      0x1e8 drivers/src/d1.o
-                                0x227 (size before relaxing)
- .debug_str     0x00000500       0x51 drivers/src/hardware_config.o
-                                0x1cb (size before relaxing)
- .debug_str     0x00000551      0x15b drivers/src/calc_moviment.o
-                                0x2f6 (size before relaxing)
- .debug_str     0x000006ac       0x57 drivers/src/moviment.o
-                                0x1e7 (size before relaxing)
- .debug_str     0x00000703       0x2c drivers/src/punts.o
-                                0x1e1 (size before relaxing)
- .debug_str     0x0000072f       0x4f drivers/src/q2.o
-                                0x21a (size before relaxing)
- .debug_str     0x0000077e       0x68 drivers/src/q3.o
-                                0x24d (size before relaxing)
- .debug_str     0x000007e6       0x5f drivers/src/USART.o
-                                0x1d5 (size before relaxing)
- .debug_str     0x00000845       0x57 main.o
-                                0x22a (size before relaxing)
+ .debug_str     0x00000318     0x7e90 drivers/src/d1.o
+                               0x7fa4 (size before relaxing)
+ .debug_str     0x000081a8       0x51 drivers/src/hardware_config.o
+                               0x74dc (size before relaxing)
+ .debug_str     0x000081f9      0x1ed drivers/src/calc_moviment.o
+                               0x80f2 (size before relaxing)
+ .debug_str     0x000083e6       0x65 drivers/src/moviment.o
+                               0x712e (size before relaxing)
+ .debug_str     0x0000844b       0x2c drivers/src/punts.o
+                               0x3ef2 (size before relaxing)
+ .debug_str     0x00008477       0x4f drivers/src/q2.o
+                               0x7f9f (size before relaxing)
+ .debug_str     0x000084c6       0x68 drivers/src/q3.o
+                               0x7fd8 (size before relaxing)
+ .debug_str     0x0000852e       0x5f drivers/src/USART.o
+                               0x70fb (size before relaxing)
+ .debug_str     0x0000858d       0x18 main.o
+                               0x7fcc (size before relaxing)
 
-.debug_loc      0x00000000      0x9e5
+.debug_loc      0x00000000      0xaa9
  *(.debug_loc)
- .debug_loc     0x00000000      0x119 drivers/src/d1.o
- .debug_loc     0x00000119       0xb1 drivers/src/hardware_config.o
- .debug_loc     0x000001ca      0x391 drivers/src/calc_moviment.o
- .debug_loc     0x0000055b       0x3b drivers/src/moviment.o
- .debug_loc     0x00000596      0x119 drivers/src/q2.o
- .debug_loc     0x000006af      0x1a2 drivers/src/q3.o
- .debug_loc     0x00000851      0x14d drivers/src/USART.o
- .debug_loc     0x0000099e       0x47 main.o
+ .debug_loc     0x00000000      0x167 drivers/src/d1.o
+ .debug_loc     0x00000167       0xb1 drivers/src/hardware_config.o
+ .debug_loc     0x00000218      0x35d drivers/src/calc_moviment.o
+ .debug_loc     0x00000575       0x3b drivers/src/moviment.o
+ .debug_loc     0x000005b0      0x167 drivers/src/q2.o
+ .debug_loc     0x00000717      0x1f0 drivers/src/q3.o
+ .debug_loc     0x00000907      0x14d drivers/src/USART.o
+ .debug_loc     0x00000a54       0x55 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -931,18 +1250,51 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x138
+.debug_ranges   0x00000000      0x120
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x20 drivers/src/d1.o
  .debug_ranges  0x00000020       0x20 drivers/src/hardware_config.o
- .debug_ranges  0x00000040       0x60 drivers/src/calc_moviment.o
- .debug_ranges  0x000000a0       0x10 drivers/src/moviment.o
- .debug_ranges  0x000000b0       0x20 drivers/src/q2.o
- .debug_ranges  0x000000d0       0x28 drivers/src/q3.o
- .debug_ranges  0x000000f8       0x30 drivers/src/USART.o
- .debug_ranges  0x00000128       0x10 main.o
+ .debug_ranges  0x00000040       0x48 drivers/src/calc_moviment.o
+ .debug_ranges  0x00000088       0x10 drivers/src/moviment.o
+ .debug_ranges  0x00000098       0x20 drivers/src/q2.o
+ .debug_ranges  0x000000b8       0x28 drivers/src/q3.o
+ .debug_ranges  0x000000e0       0x30 drivers/src/USART.o
+ .debug_ranges  0x00000110       0x10 main.o
 
-.debug_macro
+.debug_macro    0x00000000     0x37ba
  *(.debug_macro)
+ .debug_macro   0x00000000      0x10d drivers/src/d1.o
+ .debug_macro   0x0000010d      0xa4e drivers/src/d1.o
+ .debug_macro   0x00000b5b       0x10 drivers/src/d1.o
+ .debug_macro   0x00000b6b      0x1c9 drivers/src/d1.o
+ .debug_macro   0x00000d34      0x2fc drivers/src/d1.o
+ .debug_macro   0x00001030       0x9e drivers/src/d1.o
+ .debug_macro   0x000010ce       0x19 drivers/src/d1.o
+ .debug_macro   0x000010e7     0x1597 drivers/src/d1.o
+ .debug_macro   0x0000267e      0x156 drivers/src/d1.o
+ .debug_macro   0x000027d4       0xbd drivers/src/d1.o
+ .debug_macro   0x00002891       0x34 drivers/src/d1.o
+ .debug_macro   0x000028c5       0x18 drivers/src/d1.o
+ .debug_macro   0x000028dd       0x6c drivers/src/d1.o
+ .debug_macro   0x00002949       0x69 drivers/src/d1.o
+ .debug_macro   0x000029b2       0x76 drivers/src/d1.o
+ .debug_macro   0x00002a28       0x58 drivers/src/d1.o
+ .debug_macro   0x00002a80       0x10 drivers/src/d1.o
+ .debug_macro   0x00002a90       0x97 drivers/src/d1.o
+ .debug_macro   0x00002b27       0xf2 drivers/src/d1.o
+ .debug_macro   0x00002c19       0x22 drivers/src/d1.o
+ .debug_macro   0x00002c3b      0x166 drivers/src/d1.o
+ .debug_macro   0x00002da1       0x22 drivers/src/d1.o
+ .debug_macro   0x00002dc3       0x9e drivers/src/hardware_config.o
+ .debug_macro   0x00002e61      0x102 drivers/src/calc_moviment.o
+ .debug_macro   0x00002f63       0x1c drivers/src/calc_moviment.o
+ .debug_macro   0x00002f7f       0xbd drivers/src/moviment.o
+ .debug_macro   0x0000303c      0x302 drivers/src/moviment.o
+ .debug_macro   0x0000333e       0x16 drivers/src/moviment.o
+ .debug_macro   0x00003354       0x69 drivers/src/punts.o
+ .debug_macro   0x000033bd      0x117 drivers/src/q2.o
+ .debug_macro   0x000034d4      0x121 drivers/src/q3.o
+ .debug_macro   0x000035f5       0x9b drivers/src/USART.o
+ .debug_macro   0x00003690      0x12a main.o
 OUTPUT(v1.elf elf32-avr)
 LOAD linker stubs

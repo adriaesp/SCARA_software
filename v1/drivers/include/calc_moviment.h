@@ -1,49 +1,48 @@
 /*
- * moviment.h
  *
- * Created: 26/07/2025 12:28:27
- *  Author: adrie
- */ 
-
+ * calc_moviment.h
+ */
 
 #ifndef CALC_MOVIMENT_H
 #define CALC_MOVIMENT_H
 
 #include <stdint.h>
-#include <util/delay.h> 
-
+#include <stdbool.h>
+#include <math.h>
 #include "punts.h"
 
-#define L1 10.0f   // mm, braç 1
-#define L2 10.0f   // mm, braç 2 
-#define L3  0.0f    // mm, offset vertical
-#define ELBOW_UP 1  // 1 = "up"
+#define L1 0.0f     // mm, offset vertical
+#define L2 7.7f    // mm, Proximal
+#define L3 12.6f    // mm, Distal
+#define ELBOW_UP 1  // 1 = elbow-up
 
-// Conversions
-#define DEG(x) ((x) * 180.0f / (float)M_PI)
-
-
-int calcula_passos_moviments_q2(Moviment movs[]);
-int calcula_pasos_q2(float graus);
-
-int calcula_passos_moviments_q3(Moviment movs[]);
-int calcula_pasos_q3(float graus);
-
-int calcula_passos_moviments_d1(Moviment movs[]);
-int calcula_pasos_d1(float altura);
-
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
 #endif
 
-/*
+#ifndef DEG
+#define DEG(x) ((x) * 180.0f / (float)M_PI)
+#endif
 
-extern volatile int step_count;
-extern volatile int mov_index;
+// Nova estructura per al resultat de c_inversa
+typedef struct {
+    float theta2_deg;
+    float theta3_deg;
+    float d1_mm;
+    bool ok;
+} InversaResultat;
 
+int elbow;
 
-extern volatile uint8_t MOV;
-extern volatile uint8_t HM;
+int calcula_pasos_q2(float graus);
+int calcula_pasos_q3(float graus);
+int calcula_pasos_d1(float altura);
 
+int calcula_passos_moviments_q2(Moviment movs[]);
+int calcula_passos_moviments_q3(Moviment movs[]);
+int calcula_passos_moviments_d1(Moviment movs[]);
 
-void homing(void);
-void moviment_loop(void);
-*/
+InversaResultat c_inversa(float px, float py, float pz, int elbow_up);
+void genera_graus(const Taula coords[], Moviment llista_q2[], Moviment llista_q3[], Moviment llista_d1[], int max_items);
+
+#endif /* CALC_MOVIMENT_H */

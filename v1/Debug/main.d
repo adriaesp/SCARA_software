@@ -11,11 +11,8 @@ main.d main.o: .././main.c \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ..\/drivers/include/timer0_delay.h \
- c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
  ..\/drivers/include/calc_moviment.h \
- c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
- c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
+ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  ..\/drivers/include/punts.h \
  c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h \
@@ -50,15 +47,9 @@ c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\l
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
-..\/drivers/include/timer0_delay.h:
-
-c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
-
 ..\/drivers/include/calc_moviment.h:
 
-c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
-
-c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
+c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
 
 c:\users\adrie\programes\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
